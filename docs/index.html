@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/mplus1p/mplus1p.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <title>Портфолио</title>
+</head>
+<body>
+    <!---overlay-->
+    <div id="overlay"></div>
+    <!--mobile menu-->
+    <div class="mobile-menu">
+        <div class="mobile-menu__container">
+            <a class="header-nav__logo" href="index.html">ии</a>
+            <nav class="header-nav__mobile">
+                <a href="#skills" class="nav-link bottom-line">Главная</a>
+                <a href="#portfolio" class="nav-link bottom-line">Работы</a>
+                <a href="#contacts" class="nav-link bottom-line">Контакты</a>
+            </nav>
+            <div class="nav-link-messangers__mobile">
+                <a href="https://github.com/ilyas-ilimbaev" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" width="49" height="49" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path class="fill" fill="#000" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+                <a href="https://telegram.org/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="telegram.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFHUlEQVRogeWabUxbVRzGn/ZeCr0tgdIImx0zblJAjdEwdSlzShyKbonRZMaEBXFaYmYMRhOTmTjN4ieNH/Zp0frFZWTGD8NNghJNWORFYYtmOsfc3NyCDd3ogELLS+G25lxOy217b3t7WijgL2kI7T33PM89//95vTpkCc7lrgJQB2AbADuACgBmACZaQwCAH8AVAJcBnAPQLTptl7KhICMjnMtdDaAJQCOAcsbbDANoA3BMdNqGWLUwGeFcbgeAQwCeZq1YhS4Ah0WnrT/dgmkZ4Vxu8tSPAHg+Q8GpaAfQKjptw1oLaDbCudyvURPCcihXYJqa+ULLxSmNcC43Ef45zYNcQPKnRXTappmNcC63BUAHAEeOTEQgObNHdNrG1S5QNUJN/ATg/uVUmAYXAOxUM6NXMSHQllgtJkC1dFBtCSgaoTmR63BSwkG1JZBghPZOuUpsLTRSjTHE5AgdJy6tYBfLCunBquTjTHyLrOQ4kQkC1Rol2iJ02tG3BkzIqY1MZ+QtcijnstInqllqETqLvZgrNXcKHF62G9F4jwCB16G+8zauTi5oLX4vmTXz9J+m5ZOpTJ5ehz2b8/FKpYCGTQXQy7odR5khHSNE+8GIkRXrbquLeeyvFLCvQsAdBcrD2LUpzSZAtR/U0ZUd84JGC4V5Ory4xSgZeLTUkLSEGAZKvhxBYCGcThXVPF2eLgu1GwzYbxewd4tRin05wVAYn5z3S9c8sTE/+suf4/PpmiDU8XSNnTU2GPVosgtotguwF/GKt+3xBPFG7wTefsAcY4IweGueRco2nm4UZASvB54pL8CrlYL0l1OZU4/PhfDuwCS+vjaDr560SNfGc3Y0yCLFztPdDiYqi3g0VwpoqhBQZlSbfy5y4uoM3vnFBzEEdD1rxXaVXBkYZWqRCp5u2WjGxOukmCeJS7rJVPwzJeJA7wR+cM+h3MThu91WVBUrhxzJjaFxJiNmXrbvlJTNZg7vPViIl7YaYc5LvdQnvc+nv/vx0W9TmF4I4z4Lj84GK2wmTrXMr955qRwDJuVHo8DxOoumFgCN85YeH/4YW3y6pGc6/VQJigzJw2/gFlN+SOjpDmBKDvT58NlQACPTouqlU/NhtPb7UHvaGzXx3F0F+L7BmtIEpAfAFFaEABkQPQDKtJYgQfVwqUESSD6ReP/m+ize+tmHfwNLRkkvdnRHccz0Ixl3n7iJ4YD6g0rCTWKkB8AOltKgPddGgcOZkbmY799/qBAf1BRqvo9nJoRNbR5WGb083VBmNvKXb0H6RCBjyBFHEV6v1tSHRDmbQX4QD3q6K541Hik1pG2CMMg2EEY4R4x0Z9NISX7qpFYig0QndOvp+YTmzeJUWAzpb/CHMzMyTDxEHl8b613iscrWGN7ZEB7v8OLoxeQ9/GXfAnzBEGuVkvZIrcdY7xKPhYYWMbGr8zb6PEG82e/D3h/HMKEidjCzRJe0S7XSk6KuDD1IkBxxB0Q89q0XF8aWwqX9+ixqTo4qjt4ZhFVX5JRLnpmHWe8m59SNWWw/5cUVX+Jy9YZflELt4/N+yKdUvR7mFolqjt9pPLkCp1ESu2z5+LCmEH9Pimg+o3pakIx20Wl7IfL7+twypT+05kRaeiScLyp2+pzLfXwV78i3iU7bvvgv1YbhFnrctdrop9oSWN9Hb1jMF1Jg5yppmf5kJpDMCJbM1GdzCsMAqbs+mQn8r14YkLMuXuGQs+Zfqolnzb/mpEROXzwD8B9SKsPU1peaHwAAAABJRU5ErkJggg=="/></svg></a>
+                <a href="https://vk.com/ilyas.ilimbaev" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="vk.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFh0lEQVRogeVabUxVZRz/cbm8CAgiL0Egl9IQFmYojgQ2SmSK7rqVtXLTXecWW4PWynHn+pKu/NBl1Ie6W/aB7a7lzKGWZ4VkoCxQAXMG2HViDYiMhCHi5Z0L7Tk953Iu9zzn5V5e7ffl3nOet9/vefk//+f/HD/MA4xmWyKAZADRAMJoCw4AfQA6OIupe65bnRMhRrNtM4BCANsAbBGRZ4GIagZQC6CKs5h+8ZWD10KMZls4gCIAhwCk+cjDDqACwJecxTToTQWahRjNthAApQDeBRDhTaMyeAjgUwBlnMU0rKWgJiFGs80I4HMASXNEnIUuACWcxcSpLaBKiNFsCwJQDqB4rhkrwArgMGcxjSllVBRiNNtiAJCeyVoA4lJoJDQ4i6lXLpOsEGpGawCkzDdbBdwBkC9ntplC6EjULwERAoiYXNbI6KRe0jXBLSERoFw4ys0DkkLowl6sNSGHLMrNAx5Ti5rY80uFOQN7ZptmNyF0s7MvwD7hK8g+kybeNGdPrdJlIAKUY6n4hWtEqO/UNQ9ux3yBuDNJgm8mHpGiZSQClGuR8CAWcmhx+PgEF2d+atHzxHVfaw0K0CMjJR5PRocjKFDPv3M6pzDgGMXN9r9x/4FjPsRkkvOMnj4UsnI9/0w8dmalwN/f3S781TuIry7cgHNq2vXuwzcLkGqIkaxndHwSB49XYnh03O09EX9w1yaErgjEiqAAt7TxCSdO17ags2dATgjh7hKyjZUrZU00sjcYJNO67z/ET9fvup7fP1GNt1/NxkubnvbIGxyoR9zqMPxxr9/t/fbMtdidncpk2WzvVhJCuH8kdPMWVq4fm9oxMemUTNuTmwY/0U406ZxC5aVWuUbd4Ofnh905bBFDI+No/O1PpWp47jrq4TLP2GR+EzFSSI6PRM6GZLeU3oEh1UK2pichMYZtKE9e/BUjYxNK1YQRDToa7ZDF6dpWjDNGZV/BRvjrZoaFrAUWhkTrg6y5AzsymHlvd/bi+6u3lagJSNbRkI0sHjwaQfW1O5JZ1sRGyM5xMaZn7AL25j2LhJhwyXzDoxMoP/UzpkSGRAHROhWhGx6Vl9swNiHd2/t3ZCA2MpT/HxEarFgXmU6v5z/HTP+s8gr+6ddkqsNYbrwHyKicrbslmUYs0pH9LyIwwB+JsdK9TECsVkhwII4cyEOA3l8yD1dvR0NrpxYRPPQ0WKYK5+puoSBzHaJXhXpkX5cYhbLiXdDJHJ6L927lf+OjVkqmE9Nc8YNXsTqHjoYxVYEs5BPfNTGzPhUfCUNcJDOdCGCJIPimpoX3BLxAHxHSoaUcsetXvBh6NTDErfK2aIeORiY0rSzr2WvoH9QUCFSFfds3Ij9zrdZiDqJBWOzNWko+Gh5D+al6b6cBE2Snf+e1HBS+sF5LMZ67IKRWa6Otv/fgi28bNZUhTmB1UzvfEXJ46+Us3lFViVqxkCqtQggIKVvVDdX5z9S1wXrmKkqtVbw5VxKzeX2Cmmp57rwQej9hV81ITO5yGz7+uk6xlwla7vbwv/f6BnGsokbWjyLT7L03crEyRDKMJcAu3K2IN8QKbRJm0NDSiZJPzoNrsPPTh4UBx8wokD3juO2SrBgiIjtdNhbi4jznwQeyc2emJiDNEIOoiFCXm08OYmQaTk+7+09PrA7DK3npvM8mBnGHiJty8uJNDA5JjrZb8GF2XOsDAEd9EbKAOMpZTMeE5mb7WmV0VJY6uihXSAqhkbuSZSCkZPbVnIf3S2Oq1gWlpQ1WqSs5lht/mN4ULTU0Um4eeLwvevDfFCMF8mkFiw3h6o15jyh7QqSece4iT7NGOhKyn30oHnVpL+QtkgEgbeYp3ejif/fBgBiPxSccYiz7j2qksKw/c5LDgn94BuBfiS7s03Eh+cIAAAAASUVORK5CYII="/></svg></a>
+                <a href="http://www.facebook.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="facebook.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD10lEQVRogeWaTWgTWxTHf52mfa1aK7aKz4e2iNqNWtDaTRR5dtuFG4UodqWQgkJB8eEHulEUUahQaHRZtAO6ERV1Y+GpEQmKiiIUVCqigt/BlqrBVm48E5PpTM3HzcfgDwJhJnPP+WfuPffec24ZmvAHQpVAK9ACNAELgVpgmlgYBqLAE2AQuANEwmbwmw4PchLiD4SqgXXARqANqM6wiVHgGtAPnA+bwdFsfclKiD8Qqgd2AJ3yr+tAva1e4HjYDL7LqxB/IPQXsBPYDUzVJMDOCHAYOBY2g1/TfShtIf5ASPX/Pun/hUCNo46wGYykY8tIU0QXcLOAIhBbN8X2b5n0jfgDoXKgG9hWENfd6QG6wmbwu9svXIWIiD6JSKVAv3Q1RzGTda3uEhKB+NLtdrPc6aL0y/15dSs7WucvbY++eHTptv3pCV1LopMa2BUlKEQRA1bZo1mKEJknHhQ4OmWDCs3NyfOMz9bITt0iyspgUUM9ixrqqJsxBZ/vV2++cn2Q128/Z9Nsk/h6KGHH+iLLjiGdM/aypjn8t3UNDXNnON7ffvAi9x6/yrZ5tQJotJYzyVFrh04Rixvr6d7T7ipCA1PFZxJCZBXbqdPKlvUrqaxwDIo66RTfE29kncZVLOXlBi1L/sm3CMRn5XtisGud+Opqqye8jbGxcU6djfD81afEtWcvPugwp3w3fbKza9PRooV6I3Zu3B3i9IX7Os1YtCkNhmxPM93ZZcyb98P5alr53uqTPXbOLJg3k60bVsabqaq0T0/gX97AnFk1KdeOnPyf6PAXHeZbfLomwNqaKlavaHS9P3f29PjHIhb7zueRtDeAv6PJkGxHwVGDfmx8XJfZhYbOsJsJydFLA7VGUt6pwEI+6mxu2sRRmSVqzbRq48n4w3/PquHcidSp6dzVh5zou6XT+RQMyQB6nWFDEmNeJ2pILtbrPDFkt+V1Bg3JinudO0pIRLLiXkX5HjGkPjHgYSEDSoO13j5TZGdyIe67JeS8R8NwVHz/KUQqRb1Fdytzeq0qV/JW7rikWLzCiPgcx55p3AsczFVIdVUF/7YuSLk29PIjj5++0fkf7QubwUSCzr5oPAZsznWzNfolxuXreZ1nB8XXBClZAsmldkiiuFSJSZ3kq6sQEaMmyF0lLGSXU13RMRWo6g/zl7bXS4allOgJm8EDTv5MVrHqknJXqdAvPjniKkRqdR1SiCw2PZPVD0m3zi6luKNFqGLFZEy41g4t/qwDA/yKZs1qIsrzCmBEbDSnK4I/9lCNnaRjTpuAtVkecxqQpXjhjzk5UdSDZ8APBD4kTxM8TIUAAAAASUVORK5CYII="/></svg></a>
+            </div>
+            <a class="link-mail link-line blue" href="mailto:ilyasilimbaev@yandex.ru">ilyasilimbaev@yandex.ru</a>
+        </div>
+    </div>
+    <!--// mobile menu-->
+    <header class="header">
+        <!--desktop menu-->
+        <div class="header-nav__container">
+            <div class="header-nav__wrapper">
+                <a class="header-nav__logo" href="index.html">ии</a>
+                <nav class="header-nav">
+                    <a href="#skills" class="nav-link bottom-line">Главная</a>
+                    <a href="#portfolio" class="nav-link bottom-line">Работы</a>
+                    <a href="#contacts" class="nav-link bottom-line">Контакты</a>
+                </nav>
+                <div class="nav-link-messangers">
+                    <a href="http://www.linkedin.com/" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#000" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a>
+                    <a href="https://github.com/ilyas-ilimbaev" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#000" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+                    <a href="https://vk.com/ilyas.ilimbaev" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vk" class="svg-inline--fa fa-vk fa-w-18" role="img" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#000" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg></a>
+                </div>
+                <div class="toggle-menu">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!--header information block-->
+        <div class="header-center__information">
+            <div class="container">
+                <div class="header-center__content">
+                    <div class="header-center__content-img">
+                        <img src="img/img-author.jpg" alt="Ильяс Илимбаев">
+                        <div class="overlay-img"></div>
+                    </div>
+                    <div class="header-center__content-title">
+                        <div class="content-name">
+                            <h1 class="header-title"><span>Ильяс</span> <span>Илимбаев</span></h1>
+                        </div>
+                        <div class="content-desc">
+                            <p>Верстальщик сайтов, веб-разработчик. Оперативная верстка. Работаю с соблюдением сроков и выполнением ТЗ.</p>
+                        </div>
+                        <div class="header-button__wrapper">
+                            <a class="btn-more unselectable" href="#skills">Познакомиться</a>
+                            <a class="btn-contacts unselectable" href="#contacts">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// header information block-->
+        <div class="header-img">
+            <img src="img/images/centerImg.png" alt="desktop">
+        </div>
+        <div class="header-skills">
+            <div class="container">
+                <div class="header-skills__wrapper">
+                    <div class="header-skills__content" id="skills">
+                        <div class="skills-title-container">
+                            <h3 class="title-3">Что я умею:</h3>
+                        </div>
+                        <div class="skills-list__inner">
+                            <ul class="skills-list">
+                                <li class="skills-list-item"><p>pixel perfect, полное соответствие макету.</p></li>
+                                <li class="skills-list-item"><p>верстаю с сеткой или без.</p></li>
+                                <li class="skills-list-item"><p>адаптивная верстка под мобильные устройства.</p></li>
+                                <li class="skills-list-item"><p>оптимизация по retina экраны</p></li>
+                                <li class="skills-list-item"><p>с Bootstrap и без него.</p></li>
+                            </ul>
+                        </div>
+                        <div class="header-button__wrapper">
+                            <a class="btn-more unselectable" href="#portfolio">Смотреть работы</a>
+                        </div>
+                    </div>
+                    <div class="header-skills-contacts">
+                        <div class="skills-title-container">
+                            <h3 class="title-3">На связи:</h3>
+                        </div>
+                        <div class="nav-link-messangers__mobile">
+                            <a href="https://github.com/ilyas-ilimbaev" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" width="49" height="49" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path class="fill" fill="#000" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+                            <a href="https://telegram.org/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="telegram.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFHUlEQVRogeWabUxbVRzGn/ZeCr0tgdIImx0zblJAjdEwdSlzShyKbonRZMaEBXFaYmYMRhOTmTjN4ieNH/Zp0frFZWTGD8NNghJNWORFYYtmOsfc3NyCDd3ogELLS+G25lxOy217b3t7WijgL2kI7T33PM89//95vTpkCc7lrgJQB2AbADuACgBmACZaQwCAH8AVAJcBnAPQLTptl7KhICMjnMtdDaAJQCOAcsbbDANoA3BMdNqGWLUwGeFcbgeAQwCeZq1YhS4Ah0WnrT/dgmkZ4Vxu8tSPAHg+Q8GpaAfQKjptw1oLaDbCudyvURPCcihXYJqa+ULLxSmNcC43Ef45zYNcQPKnRXTappmNcC63BUAHAEeOTEQgObNHdNrG1S5QNUJN/ATg/uVUmAYXAOxUM6NXMSHQllgtJkC1dFBtCSgaoTmR63BSwkG1JZBghPZOuUpsLTRSjTHE5AgdJy6tYBfLCunBquTjTHyLrOQ4kQkC1Rol2iJ02tG3BkzIqY1MZ+QtcijnstInqllqETqLvZgrNXcKHF62G9F4jwCB16G+8zauTi5oLX4vmTXz9J+m5ZOpTJ5ehz2b8/FKpYCGTQXQy7odR5khHSNE+8GIkRXrbquLeeyvFLCvQsAdBcrD2LUpzSZAtR/U0ZUd84JGC4V5Ory4xSgZeLTUkLSEGAZKvhxBYCGcThXVPF2eLgu1GwzYbxewd4tRin05wVAYn5z3S9c8sTE/+suf4/PpmiDU8XSNnTU2GPVosgtotguwF/GKt+3xBPFG7wTefsAcY4IweGueRco2nm4UZASvB54pL8CrlYL0l1OZU4/PhfDuwCS+vjaDr560SNfGc3Y0yCLFztPdDiYqi3g0VwpoqhBQZlSbfy5y4uoM3vnFBzEEdD1rxXaVXBkYZWqRCp5u2WjGxOukmCeJS7rJVPwzJeJA7wR+cM+h3MThu91WVBUrhxzJjaFxJiNmXrbvlJTNZg7vPViIl7YaYc5LvdQnvc+nv/vx0W9TmF4I4z4Lj84GK2wmTrXMr955qRwDJuVHo8DxOoumFgCN85YeH/4YW3y6pGc6/VQJigzJw2/gFlN+SOjpDmBKDvT58NlQACPTouqlU/NhtPb7UHvaGzXx3F0F+L7BmtIEpAfAFFaEABkQPQDKtJYgQfVwqUESSD6ReP/m+ize+tmHfwNLRkkvdnRHccz0Ixl3n7iJ4YD6g0rCTWKkB8AOltKgPddGgcOZkbmY799/qBAf1BRqvo9nJoRNbR5WGb083VBmNvKXb0H6RCBjyBFHEV6v1tSHRDmbQX4QD3q6K541Hik1pG2CMMg2EEY4R4x0Z9NISX7qpFYig0QndOvp+YTmzeJUWAzpb/CHMzMyTDxEHl8b613iscrWGN7ZEB7v8OLoxeQ9/GXfAnzBEGuVkvZIrcdY7xKPhYYWMbGr8zb6PEG82e/D3h/HMKEidjCzRJe0S7XSk6KuDD1IkBxxB0Q89q0XF8aWwqX9+ixqTo4qjt4ZhFVX5JRLnpmHWe8m59SNWWw/5cUVX+Jy9YZflELt4/N+yKdUvR7mFolqjt9pPLkCp1ESu2z5+LCmEH9Pimg+o3pakIx20Wl7IfL7+twypT+05kRaeiScLyp2+pzLfXwV78i3iU7bvvgv1YbhFnrctdrop9oSWN9Hb1jMF1Jg5yppmf5kJpDMCJbM1GdzCsMAqbs+mQn8r14YkLMuXuGQs+Zfqolnzb/mpEROXzwD8B9SKsPU1peaHwAAAABJRU5ErkJggg=="/></svg></a>
+                            <a href="https://vk.com/ilyas.ilimbaev" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="vk.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFh0lEQVRogeVabUxVZRz/cbm8CAgiL0Egl9IQFmYojgQ2SmSK7rqVtXLTXecWW4PWynHn+pKu/NBl1Ie6W/aB7a7lzKGWZ4VkoCxQAXMG2HViDYiMhCHi5Z0L7Tk953Iu9zzn5V5e7ffl3nOet9/vefk//+f/HD/MA4xmWyKAZADRAMJoCw4AfQA6OIupe65bnRMhRrNtM4BCANsAbBGRZ4GIagZQC6CKs5h+8ZWD10KMZls4gCIAhwCk+cjDDqACwJecxTToTQWahRjNthAApQDeBRDhTaMyeAjgUwBlnMU0rKWgJiFGs80I4HMASXNEnIUuACWcxcSpLaBKiNFsCwJQDqB4rhkrwArgMGcxjSllVBRiNNtiAJCeyVoA4lJoJDQ4i6lXLpOsEGpGawCkzDdbBdwBkC9ntplC6EjULwERAoiYXNbI6KRe0jXBLSERoFw4ys0DkkLowl6sNSGHLMrNAx5Ti5rY80uFOQN7ZptmNyF0s7MvwD7hK8g+kybeNGdPrdJlIAKUY6n4hWtEqO/UNQ9ux3yBuDNJgm8mHpGiZSQClGuR8CAWcmhx+PgEF2d+atHzxHVfaw0K0CMjJR5PRocjKFDPv3M6pzDgGMXN9r9x/4FjPsRkkvOMnj4UsnI9/0w8dmalwN/f3S781TuIry7cgHNq2vXuwzcLkGqIkaxndHwSB49XYnh03O09EX9w1yaErgjEiqAAt7TxCSdO17ags2dATgjh7hKyjZUrZU00sjcYJNO67z/ET9fvup7fP1GNt1/NxkubnvbIGxyoR9zqMPxxr9/t/fbMtdidncpk2WzvVhJCuH8kdPMWVq4fm9oxMemUTNuTmwY/0U406ZxC5aVWuUbd4Ofnh905bBFDI+No/O1PpWp47jrq4TLP2GR+EzFSSI6PRM6GZLeU3oEh1UK2pichMYZtKE9e/BUjYxNK1YQRDToa7ZDF6dpWjDNGZV/BRvjrZoaFrAUWhkTrg6y5AzsymHlvd/bi+6u3lagJSNbRkI0sHjwaQfW1O5JZ1sRGyM5xMaZn7AL25j2LhJhwyXzDoxMoP/UzpkSGRAHROhWhGx6Vl9swNiHd2/t3ZCA2MpT/HxEarFgXmU6v5z/HTP+s8gr+6ddkqsNYbrwHyKicrbslmUYs0pH9LyIwwB+JsdK9TECsVkhwII4cyEOA3l8yD1dvR0NrpxYRPPQ0WKYK5+puoSBzHaJXhXpkX5cYhbLiXdDJHJ6L927lf+OjVkqmE9Nc8YNXsTqHjoYxVYEs5BPfNTGzPhUfCUNcJDOdCGCJIPimpoX3BLxAHxHSoaUcsetXvBh6NTDErfK2aIeORiY0rSzr2WvoH9QUCFSFfds3Ij9zrdZiDqJBWOzNWko+Gh5D+al6b6cBE2Snf+e1HBS+sF5LMZ67IKRWa6Otv/fgi28bNZUhTmB1UzvfEXJ46+Us3lFViVqxkCqtQggIKVvVDdX5z9S1wXrmKkqtVbw5VxKzeX2Cmmp57rwQej9hV81ITO5yGz7+uk6xlwla7vbwv/f6BnGsokbWjyLT7L03crEyRDKMJcAu3K2IN8QKbRJm0NDSiZJPzoNrsPPTh4UBx8wokD3juO2SrBgiIjtdNhbi4jznwQeyc2emJiDNEIOoiFCXm08OYmQaTk+7+09PrA7DK3npvM8mBnGHiJty8uJNDA5JjrZb8GF2XOsDAEd9EbKAOMpZTMeE5mb7WmV0VJY6uihXSAqhkbuSZSCkZPbVnIf3S2Oq1gWlpQ1WqSs5lht/mN4ULTU0Um4eeLwvevDfFCMF8mkFiw3h6o15jyh7QqSece4iT7NGOhKyn30oHnVpL+QtkgEgbeYp3ejif/fBgBiPxSccYiz7j2qksKw/c5LDgn94BuBfiS7s03Eh+cIAAAAASUVORK5CYII="/></svg></a>
+                            <a href="http://www.facebook.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="facebook.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD10lEQVRogeWaTWgTWxTHf52mfa1aK7aKz4e2iNqNWtDaTRR5dtuFG4UodqWQgkJB8eEHulEUUahQaHRZtAO6ERV1Y+GpEQmKiiIUVCqigt/BlqrBVm48E5PpTM3HzcfgDwJhJnPP+WfuPffec24ZmvAHQpVAK9ACNAELgVpgmlgYBqLAE2AQuANEwmbwmw4PchLiD4SqgXXARqANqM6wiVHgGtAPnA+bwdFsfclKiD8Qqgd2AJ3yr+tAva1e4HjYDL7LqxB/IPQXsBPYDUzVJMDOCHAYOBY2g1/TfShtIf5ASPX/Pun/hUCNo46wGYykY8tIU0QXcLOAIhBbN8X2b5n0jfgDoXKgG9hWENfd6QG6wmbwu9svXIWIiD6JSKVAv3Q1RzGTda3uEhKB+NLtdrPc6aL0y/15dSs7WucvbY++eHTptv3pCV1LopMa2BUlKEQRA1bZo1mKEJknHhQ4OmWDCs3NyfOMz9bITt0iyspgUUM9ixrqqJsxBZ/vV2++cn2Q128/Z9Nsk/h6KGHH+iLLjiGdM/aypjn8t3UNDXNnON7ffvAi9x6/yrZ5tQJotJYzyVFrh04Rixvr6d7T7ipCA1PFZxJCZBXbqdPKlvUrqaxwDIo66RTfE29kncZVLOXlBi1L/sm3CMRn5XtisGud+Opqqye8jbGxcU6djfD81afEtWcvPugwp3w3fbKza9PRooV6I3Zu3B3i9IX7Os1YtCkNhmxPM93ZZcyb98P5alr53uqTPXbOLJg3k60bVsabqaq0T0/gX97AnFk1KdeOnPyf6PAXHeZbfLomwNqaKlavaHS9P3f29PjHIhb7zueRtDeAv6PJkGxHwVGDfmx8XJfZhYbOsJsJydFLA7VGUt6pwEI+6mxu2sRRmSVqzbRq48n4w3/PquHcidSp6dzVh5zou6XT+RQMyQB6nWFDEmNeJ2pILtbrPDFkt+V1Bg3JinudO0pIRLLiXkX5HjGkPjHgYSEDSoO13j5TZGdyIe67JeS8R8NwVHz/KUQqRb1Fdytzeq0qV/JW7rikWLzCiPgcx55p3AsczFVIdVUF/7YuSLk29PIjj5++0fkf7QubwUSCzr5oPAZsznWzNfolxuXreZ1nB8XXBClZAsmldkiiuFSJSZ3kq6sQEaMmyF0lLGSXU13RMRWo6g/zl7bXS4allOgJm8EDTv5MVrHqknJXqdAvPjniKkRqdR1SiCw2PZPVD0m3zi6luKNFqGLFZEy41g4t/qwDA/yKZs1qIsrzCmBEbDSnK4I/9lCNnaRjTpuAtVkecxqQpXjhjzk5UdSDZ8APBD4kTxM8TIUAAAAASUVORK5CYII="/></svg></a>
+                        </div>
+                        <a class="link-mail link-line black" href="mailto:ilyasilimbaev@yandex.ru">ilyasilimbaev@yandex.ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--portfolio-->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="title-2 underline">Портфолио</h2>
+            <div class="portfolio__works">
+                <div class="portfolio-buttons-works">
+                    <button class="portfolio-block-toggle__item control-active" data-filter="all">Все работы</button>
+                    <button class="portfolio-block-toggle__item" data-filter=".boots">Bootstrap</button>
+                    <button class="portfolio-block-toggle__item" data-filter=".wp">WordPress</button>
+                    <button class="portfolio-block-toggle__item" data-filter=".frontend">Frontend</button>
+                </div>
+                <div id="works-block" class="works-cards__wrapper">
+                    <a class="portfolio-works__item portfolio-works__item--big mix boots" href="http://m92263y7.beget.tech/unit-html-project/index.html">
+                        <div class="portfolio-works__poster works-card--big">
+                            <img src="img/portfolio/project-unit.jpg" alt="Проект Юнит">
+                        </div>
+                        <div class="portfolio-works-descpip">
+                            <h4 class="title-4 portfolio-works-descpip-title">Учебный проект &ldquo;Юнит&rdquo;</h4>
+                            <p class="portfolio-works-descpip-details">Верстка лендинга с мобильной адаптацией.</p>
+                        </div>
+                    </a>
+                    <a class="portfolio-works__item portfolio-works__item--big mix wp" href="http://m92263y7.beget.tech/forest-travel-project/index.html">
+                        <div class="portfolio-works__poster works-card--big">
+                            <img src="img/portfolio/project-ForestTravel.jpg" alt="Проект Форест Трэвел">
+                        </div>
+                        <div class="portfolio-works-descpip">
+                            <h4 class="title-4 portfolio-works-descpip-title">Сайт &ldquo;Форест Трэвел&rdquo;</h4>
+                            <p class="portfolio-works-descpip-details">Верстка многостраничного сайта.</p>
+                        </div>
+                    </a>
+                    <a class="portfolio-works__item mix frontend" href="http://m92263y7.beget.tech/projects-portfolio/index.html">
+                        <div class="portfolio-works__poster works-card--big">
+                            <img src="img/portfolio/project-portfolio.jpg" alt="Проект Портфолио">
+                        </div>
+                        <div class="portfolio-works-descpip">
+                            <h4 class="title-4 portfolio-works-descpip-title">Личный сайт &ldquo;Портфолио&rdquo;</h4>
+                            <p class="portfolio-works-descpip-details">Верстка личного сайта-портфолио.</p>
+                        </div>
+                    </a>
+                    <a class="portfolio-works__item mix boots" href="http://m92263y7.beget.tech/book-card/index.html">
+                        <div class="portfolio-works__poster works-card--big">
+                            <img src="img/portfolio/Books-card.png" alt="Карточка товара Book">
+                        </div>
+                        <div class="portfolio-works-descpip">
+                            <h4 class="title-4 portfolio-works-descpip-title">Карточка товара &ldquo;Book&rdquo;</h4>
+                            <p class="portfolio-works-descpip-details">Верстка карточки товара под pixel perfect.</p>
+                        </div>
+                    </a>
+                    <a class="portfolio-works__item mix frontend" href="http://m92263y7.beget.tech/motocycle-card/index.html">
+                        <div class="portfolio-works__poster works-card--big">
+                            <img src="img/portfolio/Motorbike-card.png" alt="Карточка товара Moto">
+                        </div>
+                        <div class="portfolio-works-descpip">
+                            <h4 class="title-4 portfolio-works-descpip-title">Карточка товара &ldquo;Moto&rdquo;</h4>
+                            <p class="portfolio-works-descpip-details">Верстка карточки товара под pixel perfect.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// portfolio-->
+        <!--// desktop menu-->
+    <section class="timeline">
+        <div class="container">
+            <div class="timeline__inner">
+                <h2 class="title-2 underline">Как я работаю</h2>
+                <div class="timeline-block">
+                    <div class="timeline-block__item">
+                        <div class="timeline-item__text">
+                            <h4 class="title-5">
+                                Оцениваю макет
+                            </h4>
+                            <p class="timeline-item__text--desc title-3">
+                                Оцениваю объем работы, сложность,  нюансы. Задаю вопросы.
+                            </p>
+                            <p class="timeline-item__text--timeBlock">
+                                Время: 2 - 4 часа
+                            </p>
+                        </div>
+                        <div class="timeline-item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+                                <image id="layers.svg" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABa1BMVEX/z4//////z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z4//z48AAACBEcZhAAAAd3RSTlMAAAFBB2PUFHzpJ5f3P7L+BFrMD3TjII7zNan8PT45/Tgpm/gWgesJZthMvjKk+xyK8AsMb98vovrAAgNVxzvZaDzsgxej+Z0sG4jvuEVt3tNgBlTF6HsTqyGQ9BB15JnlhxoFW86J55w6MLxKS73WZQjqgBW1RL34ZkwAAAABYktHRHjW2+RGAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5QILEDoBaRS5bwAAAgBJREFUOMuNlfdbwjAQhkNRQEURFBcqFNACAoooIg7cTGUIqLgH7r3y70vT2DSUAt8v9HLvU5LL3VcAZGLUaoZEKiwZ1taugVDT3tYE1Oo6IFKHTtsA7OzSQ1H6rk4FsLvHACkZerrlYK/RBOvIZOylwL5+M1SQub9PBAcGh2ADDQ0OIHB4xAKbyDIyrAKjzShBY2Dc2gpnsQHA2h3NMIedRYdxTkw2wiYnnGJ5OJdbCXO7OKrgjGeqHjblYeRX6PX5acrv8yo0xfRMgGCBmenappglaHBuXsDm54KkzWYRGFoIL3oiIrq0vALhyvKS2LgRz2J4IaQCq6jg0TVOslkveebWonzesA7WcRNubG7Jx2drc0PIWlerf70dFoKdWJzG4rEdIRPeDqHDJJIpfNL0rjh/zG4aL6aSCbE8wb0MXs3m8vxCPpfFC5m9IFXHyH4BZ4qlg4NSEQeF/Yi84LZD3MF+fEOWQ5vCzRyVj8nNHJePGhjAyemZgJ2dntQaAHt+cXlF0OubCoSVm2tiKYnbu/tq49r4jVXvSPLahwdJ8Ojjy2wdB2N4S0/PDJCJeXnF6VHJuL69f9AY9477Ho2r1AA+v74J5vzCk/RvAJSl6O2ssMLasbFJLYU2qZ9fAH5/cFBrUkii7Wk0wm9d20Nq0Uh5tWjNvFo0e1Tlup+PP4sgOqirk/JeAAAAAElFTkSuQmCC"/>
+                            </svg>                              
+                        </div>
+                    </div>
+                    <div class="timeline-block__item">
+                        <div class="timeline-item__text">
+                            <h4 class="title-5">
+                                ТЗ, смета и график работ
+                            </h4>
+                            <p class="timeline-item__text--desc title-3">
+                                Согласовываем техническое задание и график работ по проекту. Отмечаю стоимость по этапам работы.
+                            </p>
+                            <p class="timeline-item__text--timeBlock">
+                                Время: 2 - 4 часа
+                            </p>
+                        </div>
+                        <div class="timeline-item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+                                <image id="presentation-chart.svg" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAoCAMAAABKKxPSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABPlBMVEX/W1v/////W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1v/W1sAAACZVJqLAAAAaHRSTlMAAAmNvsCPdnu1t7GuZmEBY5Aq4DD52/3cIDr78VIehBy/8zd45CMH4fZCJAOleUMYiOslnbBrLZe0af5zK37vlaHCLgrw7Ubm5QIQYIBwW+NOPMoiq54aMfX6sx2MJrJl0kVHeq2kYjiuGZgAAAABYktHRGm8a8S0AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5QILEhwbVCwXXwAAAUxJREFUOMu902k3w0AUBuArgtoSIlpLUKrWUmoJiqLWiNp3Sq39/7/AnUyqTc8kM/3A+6G5c/Kc0zszuSDVyw28yI0SNBVFEoJmIdcCrUKuDdqFnAJqRyc/igq81NHU4LQuXjTH6dxd6P/rusMREdfTC339TGcMDA6VWRTfDbPcSAxXo+4iPoaL8QmGm5xyDpbC+DSWiRlGfy4DmK1mHhdJEjNHfuaLqQV8qIusc1kiYtkgLULIJGyFeX6rWK3hlmPuv1cwj0uvb2ySZ8akbot3HymT9si9NwI9zO/ejO2dP/lefpN13O4eh+1LdI4ODgPZUbI0b9ZxUKwa57Iqum3bmoA7wZZyXKeenqELn3PcxaW7SVkPcFfX5dNI39z6ubt7Rzw80mnMPPm4Z/ph5yH/4lQ5H/eK7wp0mt4KWL/7uMTHp2KVauXru7K/H7wYTLx7XQU9AAAAAElFTkSuQmCC"/>
+                            </svg>                                                           
+                        </div>
+                    </div>
+                    <div class="timeline-block__item">
+                        <div class="timeline-item__text">
+                            <h4 class="title-5">
+                                Вы держите руку на пульсе
+                            </h4>
+                            <p class="timeline-item__text--desc title-3">
+                                Выдаю клиенту доступ к GitHub репозиторию и доске Trello. Вы в любое время можете увидеть актуальное состояние проекта и задач.
+                            </p>
+                            <p class="timeline-item__text--timeBlock">
+                                Время: 2 часа
+                            </p>
+                        </div>
+                        <div class="timeline-item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+                                <image id="_24-hours.svg" data-name="24-hours.svg" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAMAAAChHKjRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACB1BMVEWsdO7///+sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO6sdO4AAAB0jb5aAAAAq3RSTlMAAJBT8KsW7VuxGw4zUGD2KofQ/rkePbvyIhOm0xQ35PyFB0wyQfjgiUgZBvuABR/u21QEzDBHIAHFmQj5e4rEAmR5KSHIZeKOJuNfzrzAPHXGzXZmkie/EP3CrEkSTWdo80UY6U5LeiOiqny6DX2cYbJznd2aLCWTcMOtry3aDKDxT6E/2LDHGoRE9IZecd7WvVpDXbTXK9Lc939+V1VCEa62XBWU6+eNjIPnTXqMAAAAAWJLR0SsV2XyiwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+UCDQ03BnNLPX4AAAJ/SURBVDjLjZT5WxJhEMcHtaIoMShNUwOtKMAjMd1SOy0tKzPTJOigSLKMtFPKdLOgu+yiQjvVLOef7H1nd1l2l57H+WXm/c5n971mXgCD5eRmjkzMjAzk4ZKli4BwmXkREOLyFf+HLCtX5Vs5hHn52aGC1TY7qrZmrREqLEKdrSvWQSXr0WClZVqofIMBcTgrtNNVWg2MbaNu4Zs2yxnXlq1uj4sF3qpq3RHU1ErItjofHzKofruy1oZGCRJ2SMzOJkl3Nbf4ZKR6F+7eQ9BeidmnfJy7X4laDzD9IIc8bcS0G+/nEF3QYQ+DOog54jNCwlFKdTDoGEWdAE3Hu1wnuiX4ZH0PC3odPHXKBH1+HnQB+E4THaA9sSDIfIAr/jNwllLnAM4jhmwsvABwMcw8r4JLlOyHCPnLAAOIhXAF8SoIg+iQoGs0TRSuc2cVAIbswwDDiDegG+03JQhu8ext/i27Di6wld5xoP9uuRdHYjJ0j2fvw2gaAnjAjszpG8O28WgmNAoidw+JmQghPhIeI8YTccQnQ0yK86wITlr4UybwLTwT4LlSLC8AKrw8eAmvSGAt9Jq5N6I40tsiiuIk4tt3AO8p+QGKyX8ESMo/oNNsR5xgjraOrNTHuLd/AvNnF7dkJYc6Q19KANwpKjN2d1NEDwray6UrHKDUtEnBMWasgq+USLl50fVQ7P+mZ75L3ZFDlfkjLFEx7YwdzSSH+6RGCMr7KipQkdafstivtNSULNh/zfBThdm6gEOWqtTmnFObsjZZ+lsdzWW2+TRmtaj2wQjOG5H5Bv3TY/mT0iKpv5Ysj9hsZFJFkpEy3YORthrzgphIiAszjWmJQ/8AR4qfHUS4VjMAAAAASUVORK5CYII="/>
+                            </svg>                                                          
+                        </div>
+                    </div>
+                    <div class="timeline-block__item">
+                        <div class="timeline-item__text">
+                            <h4 class="title-5">
+                                Выполняю каждый этап
+                            </h4>
+                            <p class="timeline-item__text--desc title-3">
+                                Поочередно выполняю каждый этап работы. Передаю результаты. Заказчик производит поэтапную оплату.
+                            </p>
+                            <p class="timeline-item__text--timeBlock">
+                                Время: 2 - 4 часа
+                            </p>
+                        </div>
+                        <div class="timeline-item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+                                <image id="code-alt.svg" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAjCAMAAADVEmihAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABrVBMVEVR5cv///9R5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5ctR5csAAADa5gCnAAAAjXRSTlMAADBWIpP8ZzX3DXwquvgHBPTAN4N0RAVbjW4SswsKX39QKc7pJgLuyBraJGX2tS+KpF4BkO1sTOCGndaq/hCXkWLo0GOJZieSYCzNZFQr2NKyCaMXD788twYfmhb6XE5z/XKbHna4rRSludziIBii4d8V5KjrJd2UzMbRTxGplULD8M9h+0iLLQxvVS5YQmjLAAAAAWJLR0SOggWzbwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+UCDQ03HI4pxAQAAAHySURBVDjLjZPnWxNBEMYngAmgpKABg4Bo4CgJWE4IFlCJJgokFAstAZViQMASBBSlShG8/9nb2Zkk5OF4dr/s+877S25vbhbg7FVQWCSFLbMsyAuGYXcoocWGuUpKVdCLAjUuqaBlgnS6FFC3R6DlKme9jM+/ooJ6Ea2wQiuv+qquka4WpL0GoPZ63Q13PnrTb6b1Dai1RoE2ATS3iD1wGg224jPb0NxCfRvgDgrP3RxUv2fI1Y62A3UIoJPK93VG9QdUMh4i+kjIrm4AP9cf64Q+4YrxFNEeIcOmeJYJnks0wt4TRDKK5oWQVU7OXgq0t4RcH41dP7oY6vgA/03UBtogmaFh6sYrtK+lefOWYr8GIyRHx7jF+N4D7GqZHYEQqSBn42gn2NocBIQgQUdNFlI2iXaS0amkzJ0JgHf0q/cfZDaNbobICJHGrNkBfY4b8jElQnznTgl2z3O2oIu+pj6xX1wCWEb1WR77Cydfv8mvFUhzZQUghqIf0RWufw/wuKwyuwawjqIh2zZzpePZIWz+IWs/AcJi75FlGpeN8dx5dfmw+At+d4l9M7dvW8N5F2Z7Z3fP/O7yi3RQ8U/Lft+B1TU8RPQoW7C+sU2CbNQU0L92HDJQQOUN9KqgqWTeUc8567HZLB8oobB68g/ORv8Dba4QUwYMgpIAAAAASUVORK5CYII="/>
+                            </svg>                                                                                
+                        </div>
+                    </div>
+                    <div class="timeline-block__item">
+                        <div class="timeline-item__text">
+                            <h4 class="title-5">
+                                Финальное ревью проекта
+                            </h4>
+                            <p class="timeline-item__text--desc title-3">
+                                Проект готов. Финальное ревью и полировка до идеального состояния. Передаю файлы проекта, заливаю сайт на хостинг заказчика.
+                            </p>
+                            <p class="timeline-item__text--timeBlock">
+                                Время: 2 - 4 часа
+                            </p>
+                        </div>
+                        <div class="timeline-item__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32">
+                                <image id="diamond.svg" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAjCAMAAADR57icAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABjFBMVEV8wP////98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP98wP8AAAAkpKa7AAAAgnRSTlMAAFSuwLZpA4SpAnCQW3VI+u07IKevsqQs3jf2OQZLUOoFJutFKez7SulM8jEc5F6Vqv3nIRPWchL5M/gPY9kUCsj80N3cx4+OpSPvQB8QYcXKXeFEZrcIGAS8aD3amJOhd3qcbbrXQmS0uGBG2O4lJyjwLjLl26xrqL6Wb50iPo2UWTbxQQAAAAFiS0dEg/y0z9IAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQflAg0NNyc/Ii0gAAAB+ElEQVQ4y42T50MTQRTEBxAOqQmHQIAgIFUEUaoSigKCAULRoBSlGnpHqbb7y32ze5diEsh8yJvd+112Z98e4Cg940GcMrOMNFthLttKqIc5/4G5VhLlxYL5VlIVRIOFLplxF5lmsdRHplkipdQ0yzwk8yNgeYWMKyoBr1tMFfBYSnUNUPtEjKvOAesbZNjYBA00C+DlzFPnL1qeabC1jQs85ysZ3D1Nu5gXNFUvxXV0EuzqJtfD2d5X4l6rzYjp89H18+nAYBqG3tC9HaZGaJUbphtVjjmtd0MYs1LSON6nBhbD706Fm6gFJrkJz1RANC1uJqA0K3aOpvMDI3zk8QT5yrzBg+K5e5n1U5/Yz2IWFvl0SR94nuUcH1tWSbMs5gvNVz5bsTtjzHMUFLcqdY1T62I2pG7yyTfD6bUvxJZuAdtSdzizK2YP2GdfDgKR26OiHx7hmCVH1mgR48fJqZqOvo8q+kEAzVLOgHMp39H7g5dlK/aGB/VmLuT3Ut/3q5prO3DsN6Oi39ySABQfDhwL6ugbak21g58c78Z/hTq6kv/YcSEf4sFI1/e2beP2IxGoo3P9VV1dk0gM6ujSO4+u7FViUEd3pLqfBNTRtdR9SgZGRQ/5cBcYjt7wC3eDdnTXb9wHYolgP+4HsWJZf5AKaLT/NeLBf0WfPrvtOxa2AAAAAElFTkSuQmCC"/>
+                            </svg>                                                                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="title-2 underline">Контакты</h2>
+            <div class="contacts__wrapper">
+                <div class="contacts-info">
+                    <div class="contacts-desc">
+                        <p>Если вы ищите специалиста по верстке сайтов, front-end разработчика в команду или для работы над проектом — напишите мне.</p>
+                        <ul class="contacts-list">
+                            <li class="contacts-item"><span class="contacts-links-header">Email</span><a class="contacts-links-item" href="mailto:ilyasilimbaev@yandex.ru">ilyasilimbaev@yandex.ru</a></li>
+                            <li class="contacts-item"><span class="contacts-links-header">Skype</span><a class="contacts-links-item gray-colors" href="">ilyasilimbaev@yandex.ru</a></li>
+                            <li class="contacts-item"><span class="contacts-links-header">Адрес</span><a class="contacts-links-item gray-colors" href="https://yandex.ru/maps/-/CCQxvJSlXC" target="_blank">Россия, Екатеринбург</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-link-messangers nav-link-messangers__mobile">
+                        <a href="https://github.com/ilyas-ilimbaev" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" width="49" height="49" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path class="fill" fill="#000" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+                        <a href="https://telegram.org/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="telegram.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFHUlEQVRogeWabUxbVRzGn/ZeCr0tgdIImx0zblJAjdEwdSlzShyKbonRZMaEBXFaYmYMRhOTmTjN4ieNH/Zp0frFZWTGD8NNghJNWORFYYtmOsfc3NyCDd3ogELLS+G25lxOy217b3t7WijgL2kI7T33PM89//95vTpkCc7lrgJQB2AbADuACgBmACZaQwCAH8AVAJcBnAPQLTptl7KhICMjnMtdDaAJQCOAcsbbDANoA3BMdNqGWLUwGeFcbgeAQwCeZq1YhS4Ah0WnrT/dgmkZ4Vxu8tSPAHg+Q8GpaAfQKjptw1oLaDbCudyvURPCcihXYJqa+ULLxSmNcC43Ef45zYNcQPKnRXTappmNcC63BUAHAEeOTEQgObNHdNrG1S5QNUJN/ATg/uVUmAYXAOxUM6NXMSHQllgtJkC1dFBtCSgaoTmR63BSwkG1JZBghPZOuUpsLTRSjTHE5AgdJy6tYBfLCunBquTjTHyLrOQ4kQkC1Rol2iJ02tG3BkzIqY1MZ+QtcijnstInqllqETqLvZgrNXcKHF62G9F4jwCB16G+8zauTi5oLX4vmTXz9J+m5ZOpTJ5ehz2b8/FKpYCGTQXQy7odR5khHSNE+8GIkRXrbquLeeyvFLCvQsAdBcrD2LUpzSZAtR/U0ZUd84JGC4V5Ory4xSgZeLTUkLSEGAZKvhxBYCGcThXVPF2eLgu1GwzYbxewd4tRin05wVAYn5z3S9c8sTE/+suf4/PpmiDU8XSNnTU2GPVosgtotguwF/GKt+3xBPFG7wTefsAcY4IweGueRco2nm4UZASvB54pL8CrlYL0l1OZU4/PhfDuwCS+vjaDr560SNfGc3Y0yCLFztPdDiYqi3g0VwpoqhBQZlSbfy5y4uoM3vnFBzEEdD1rxXaVXBkYZWqRCp5u2WjGxOukmCeJS7rJVPwzJeJA7wR+cM+h3MThu91WVBUrhxzJjaFxJiNmXrbvlJTNZg7vPViIl7YaYc5LvdQnvc+nv/vx0W9TmF4I4z4Lj84GK2wmTrXMr955qRwDJuVHo8DxOoumFgCN85YeH/4YW3y6pGc6/VQJigzJw2/gFlN+SOjpDmBKDvT58NlQACPTouqlU/NhtPb7UHvaGzXx3F0F+L7BmtIEpAfAFFaEABkQPQDKtJYgQfVwqUESSD6ReP/m+ize+tmHfwNLRkkvdnRHccz0Ixl3n7iJ4YD6g0rCTWKkB8AOltKgPddGgcOZkbmY799/qBAf1BRqvo9nJoRNbR5WGb083VBmNvKXb0H6RCBjyBFHEV6v1tSHRDmbQX4QD3q6K541Hik1pG2CMMg2EEY4R4x0Z9NISX7qpFYig0QndOvp+YTmzeJUWAzpb/CHMzMyTDxEHl8b613iscrWGN7ZEB7v8OLoxeQ9/GXfAnzBEGuVkvZIrcdY7xKPhYYWMbGr8zb6PEG82e/D3h/HMKEidjCzRJe0S7XSk6KuDD1IkBxxB0Q89q0XF8aWwqX9+ixqTo4qjt4ZhFVX5JRLnpmHWe8m59SNWWw/5cUVX+Jy9YZflELt4/N+yKdUvR7mFolqjt9pPLkCp1ESu2z5+LCmEH9Pimg+o3pakIx20Wl7IfL7+twypT+05kRaeiScLyp2+pzLfXwV78i3iU7bvvgv1YbhFnrctdrop9oSWN9Hb1jMF1Jg5yppmf5kJpDMCJbM1GdzCsMAqbs+mQn8r14YkLMuXuGQs+Zfqolnzb/mpEROXzwD8B9SKsPU1peaHwAAAABJRU5ErkJggg=="/></svg></a>
+                        <a href="https://vk.com/ilyas.ilimbaev" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="vk.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFh0lEQVRogeVabUxVZRz/cbm8CAgiL0Egl9IQFmYojgQ2SmSK7rqVtXLTXecWW4PWynHn+pKu/NBl1Ie6W/aB7a7lzKGWZ4VkoCxQAXMG2HViDYiMhCHi5Z0L7Tk953Iu9zzn5V5e7ffl3nOet9/vefk//+f/HD/MA4xmWyKAZADRAMJoCw4AfQA6OIupe65bnRMhRrNtM4BCANsAbBGRZ4GIagZQC6CKs5h+8ZWD10KMZls4gCIAhwCk+cjDDqACwJecxTToTQWahRjNthAApQDeBRDhTaMyeAjgUwBlnMU0rKWgJiFGs80I4HMASXNEnIUuACWcxcSpLaBKiNFsCwJQDqB4rhkrwArgMGcxjSllVBRiNNtiAJCeyVoA4lJoJDQ4i6lXLpOsEGpGawCkzDdbBdwBkC9ntplC6EjULwERAoiYXNbI6KRe0jXBLSERoFw4ys0DkkLowl6sNSGHLMrNAx5Ti5rY80uFOQN7ZptmNyF0s7MvwD7hK8g+kybeNGdPrdJlIAKUY6n4hWtEqO/UNQ9ux3yBuDNJgm8mHpGiZSQClGuR8CAWcmhx+PgEF2d+atHzxHVfaw0K0CMjJR5PRocjKFDPv3M6pzDgGMXN9r9x/4FjPsRkkvOMnj4UsnI9/0w8dmalwN/f3S781TuIry7cgHNq2vXuwzcLkGqIkaxndHwSB49XYnh03O09EX9w1yaErgjEiqAAt7TxCSdO17ags2dATgjh7hKyjZUrZU00sjcYJNO67z/ET9fvup7fP1GNt1/NxkubnvbIGxyoR9zqMPxxr9/t/fbMtdidncpk2WzvVhJCuH8kdPMWVq4fm9oxMemUTNuTmwY/0U406ZxC5aVWuUbd4Ofnh905bBFDI+No/O1PpWp47jrq4TLP2GR+EzFSSI6PRM6GZLeU3oEh1UK2pichMYZtKE9e/BUjYxNK1YQRDToa7ZDF6dpWjDNGZV/BRvjrZoaFrAUWhkTrg6y5AzsymHlvd/bi+6u3lagJSNbRkI0sHjwaQfW1O5JZ1sRGyM5xMaZn7AL25j2LhJhwyXzDoxMoP/UzpkSGRAHROhWhGx6Vl9swNiHd2/t3ZCA2MpT/HxEarFgXmU6v5z/HTP+s8gr+6ddkqsNYbrwHyKicrbslmUYs0pH9LyIwwB+JsdK9TECsVkhwII4cyEOA3l8yD1dvR0NrpxYRPPQ0WKYK5+puoSBzHaJXhXpkX5cYhbLiXdDJHJ6L927lf+OjVkqmE9Nc8YNXsTqHjoYxVYEs5BPfNTGzPhUfCUNcJDOdCGCJIPimpoX3BLxAHxHSoaUcsetXvBh6NTDErfK2aIeORiY0rSzr2WvoH9QUCFSFfds3Ij9zrdZiDqJBWOzNWko+Gh5D+al6b6cBE2Snf+e1HBS+sF5LMZ67IKRWa6Otv/fgi28bNZUhTmB1UzvfEXJ46+Us3lFViVqxkCqtQggIKVvVDdX5z9S1wXrmKkqtVbw5VxKzeX2Cmmp57rwQej9hV81ITO5yGz7+uk6xlwla7vbwv/f6BnGsokbWjyLT7L03crEyRDKMJcAu3K2IN8QKbRJm0NDSiZJPzoNrsPPTh4UBx8wokD3juO2SrBgiIjtdNhbi4jznwQeyc2emJiDNEIOoiFCXm08OYmQaTk+7+09PrA7DK3npvM8mBnGHiJty8uJNDA5JjrZb8GF2XOsDAEd9EbKAOMpZTMeE5mb7WmV0VJY6uihXSAqhkbuSZSCkZPbVnIf3S2Oq1gWlpQ1WqSs5lht/mN4ULTU0Um4eeLwvevDfFCMF8mkFiw3h6o15jyh7QqSece4iT7NGOhKyn30oHnVpL+QtkgEgbeYp3ejif/fBgBiPxSccYiz7j2qksKw/c5LDgn94BuBfiS7s03Eh+cIAAAAASUVORK5CYII="/></svg></a>
+                        <a href="http://www.facebook.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 50 50"><image id="facebook.svg" width="49" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD10lEQVRogeWaTWgTWxTHf52mfa1aK7aKz4e2iNqNWtDaTRR5dtuFG4UodqWQgkJB8eEHulEUUahQaHRZtAO6ERV1Y+GpEQmKiiIUVCqigt/BlqrBVm48E5PpTM3HzcfgDwJhJnPP+WfuPffec24ZmvAHQpVAK9ACNAELgVpgmlgYBqLAE2AQuANEwmbwmw4PchLiD4SqgXXARqANqM6wiVHgGtAPnA+bwdFsfclKiD8Qqgd2AJ3yr+tAva1e4HjYDL7LqxB/IPQXsBPYDUzVJMDOCHAYOBY2g1/TfShtIf5ASPX/Pun/hUCNo46wGYykY8tIU0QXcLOAIhBbN8X2b5n0jfgDoXKgG9hWENfd6QG6wmbwu9svXIWIiD6JSKVAv3Q1RzGTda3uEhKB+NLtdrPc6aL0y/15dSs7WucvbY++eHTptv3pCV1LopMa2BUlKEQRA1bZo1mKEJknHhQ4OmWDCs3NyfOMz9bITt0iyspgUUM9ixrqqJsxBZ/vV2++cn2Q128/Z9Nsk/h6KGHH+iLLjiGdM/aypjn8t3UNDXNnON7ffvAi9x6/yrZ5tQJotJYzyVFrh04Rixvr6d7T7ipCA1PFZxJCZBXbqdPKlvUrqaxwDIo66RTfE29kncZVLOXlBi1L/sm3CMRn5XtisGud+Opqqye8jbGxcU6djfD81afEtWcvPugwp3w3fbKza9PRooV6I3Zu3B3i9IX7Os1YtCkNhmxPM93ZZcyb98P5alr53uqTPXbOLJg3k60bVsabqaq0T0/gX97AnFk1KdeOnPyf6PAXHeZbfLomwNqaKlavaHS9P3f29PjHIhb7zueRtDeAv6PJkGxHwVGDfmx8XJfZhYbOsJsJydFLA7VGUt6pwEI+6mxu2sRRmSVqzbRq48n4w3/PquHcidSp6dzVh5zou6XT+RQMyQB6nWFDEmNeJ2pILtbrPDFkt+V1Bg3JinudO0pIRLLiXkX5HjGkPjHgYSEDSoO13j5TZGdyIe67JeS8R8NwVHz/KUQqRb1Fdytzeq0qV/JW7rikWLzCiPgcx55p3AsczFVIdVUF/7YuSLk29PIjj5++0fkf7QubwUSCzr5oPAZsznWzNfolxuXreZ1nB8XXBClZAsmldkiiuFSJSZ3kq6sQEaMmyF0lLGSXU13RMRWo6g/zl7bXS4allOgJm8EDTv5MVrHqknJXqdAvPjniKkRqdR1SiCw2PZPVD0m3zi6luKNFqGLFZEy41g4t/qwDA/yKZs1qIsrzCmBEbDSnK4I/9lCNnaRjTpuAtVkecxqQpXjhjzk5UdSDZ8APBD4kTxM8TIUAAAAASUVORK5CYII="/></svg></a>
+                    </div>
+                </div>
+                <div class="contacts-form">
+                    <form action="" class="contact-form">
+                        <div class="form-item">
+                            <span class="fake-placeholder">Ваш email</span>
+                            <input type="text" name="email" class="form-field">
+                        </div>
+                        <div class="form-item">
+                            <span class="fake-placeholder">Тема письма</span>
+                            <input type="text" name="subject" class="form-field">
+                        </div>
+                        <div class="form-item">
+                            <span class="fake-placeholder">Текст сообщения</span>
+                            <textarea name="message" class="form-field"></textarea>
+                        </div>
+                        <div class="form-item form-btn">
+                            <input type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <span class="footer-copyright">2020 - Илимбаев Ильяс</span>
+                <p class="footer-text">Веб-разработчик из Екатеринбурга, занимаюсь версткой и созданием сайтов.<br> Этот сайт сделал в рамках прохождения обучения по верстке на курсах от <a class="footer-text__bottom-line" href="https://webcademy.ru/" target="_blank">WebCademy.ru</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="libs/mixitup3/mixitup.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
