@@ -1,45 +1,3 @@
-@font-face {
-  font-family: 'mplus1p';
-  src: url('../fonts/mplus-1p/mplus1pthin-webfont.woff2') format('woff2'), url('../fonts/mplus-1p/mplus1pthin-webfont.woff') format('woff'), url('../fonts/mplus-1p/mplus1pthin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'mplus1p';
-  src: url('../fonts/mplus-1p/mplus1plight-webfont.woff2') format('woff2'), url('../fonts/mplus-1p/mplus1plight-webfont.woff') format('woff'), url('../fonts/mplus-1p/mplus1plight.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'mplus1p';
-  src: url('../fonts/mplus-1p/mplus1p-webfont.woff2') format('woff2'), url('../fonts/mplus-1p/mplus1p-webfont.woff') format('woff'), url('../fonts/mplus-1p/mplus1p.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'mplus1p';
-  src: url('../fonts/mplus-1p/mplus1pmedium-webfont.woff2') format('woff2'), url('../fonts/mplus-1p/mplus1pmedium-webfont.woff') format('woff'), url('../fonts/mplus-1p/mplus1pmedium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'mplus1p';
-  src: url('../fonts/mplus-1p/mplus1pbold-webfont.woff2') format('woff2'), url('../fonts/mplus-1p/mplus1pbold-webfont.woff') format('woff'), url('../fonts/mplus-1p/mplus1pbold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'mplus1p';
-  src: url('../fonts/mplus-1p/mplus1pextrabold-webfont.woff2') format('woff2'), url('../fonts/mplus-1p/mplus1pextrabold-webfont.woff') format('woff'), url('../fonts/mplus-1p/mplus1pextrabold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'mplus1p';
-  src: url('../fonts/mplus-1p/mplus1pblack-webfont.woff2') format('woff2'), url('../fonts/mplus-1p/mplus1pblack-webfont.woff') format('woff'), url('../fonts/mplus-1p/mplus1pblack.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
 :root {
   --text: #000;
   --red: #ea736d;
@@ -218,7 +176,7 @@ button {
 @media only screen and (min-width: 1200px) {
   .container {
     padding: 0;
-    max-width: 1174px;
+    max-width: 1140px;
   }
 }
 .header-nav__container {
@@ -271,6 +229,13 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  .nav-link-messangers__mobile {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .portfolio .underline::after,
 .timeline .underline::after {
@@ -379,7 +344,7 @@ button {
 }
 @media only screen and (min-width: 1200px) {
   .header {
-    padding-top: 74px;
+    padding-top: 60px;
   }
 }
 .header-nav__wrapper {
@@ -592,6 +557,16 @@ path:hover {
   border-top: 2px solid #ed9626;
   border-bottom: 2px solid #039be5;
   border-radius: 7px;
+}
+@media only screen and (min-width: 768px) {
+  .nav-link-messangers__mobile a {
+    margin-right: 50px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nav-link-messangers__mobile a {
+    margin-right: 50px;
+  }
 }
 .nav-link-messangers__mobile a:last-child {
   margin-right: 0;
@@ -900,6 +875,23 @@ path:hover {
 @media only screen and (min-width: 1200px) {
   .header-skills-contacts .nav-link-messangers__mobile {
     margin-bottom: 34px;
+  }
+}
+.header-skills-contacts > .nav-link-messangers__mobile {
+  display: block;
+}
+@media only screen and (min-width: 780px) {
+  .header-skills-contacts > .nav-link-messangers__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header-skills-contacts > .nav-link-messangers__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 .black {
@@ -1358,6 +1350,18 @@ path:hover {
     margin-right: 32px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .contacts-info,
+  .contacts-form {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contacts-info,
+  .contacts-form {
+    width: 50%;
+  }
+}
 .contacts-desc p {
   font-size: 16px;
   font-family: var(--fontFam);
@@ -1366,12 +1370,14 @@ path:hover {
 }
 @media only screen and (min-width: 768px) {
   .contacts-desc p {
+    max-width: 295px;
     font-size: 18px;
     margin-bottom: 30px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .contacts-desc p {
+    max-width: 500px;
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 44px;
@@ -1389,24 +1395,23 @@ path:hover {
 }
 @media only screen and (min-width: 1200px) {
   .contacts-item {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: inline-block;
     margin-bottom: 33px;
   }
 }
 .contacts-item:last-child {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .contacts-links-header {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.45;
   color: #000;
+}
+@media only screen and (min-width: 1200px) {
+  .contacts-links-header {
+    margin-right: 50px;
+  }
 }
 .contacts-links-item {
   font-size: 20px;
