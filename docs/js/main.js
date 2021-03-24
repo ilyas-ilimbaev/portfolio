@@ -3,8 +3,7 @@ $(document).ready(function() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const overlay = document.querySelector('#overlay');
     const bodyEl = document.body;
-    const formEl = document.querySelector('.form-field');
-    const FakeEl = document.querySelector('.fake-placeholder');
+    const formEl = document.querySelectorAll('.form-field');
 
     //прослушиваем событие клик по гамбургеру
     toggleMenu.addEventListener('click', function() {
@@ -37,9 +36,26 @@ $(document).ready(function() {
             block: ""
         }
     });
-    formEl.addEventListener('click', function() {
-        FakeEl.classList.toggle('active');
-    });
+    //form placeholder
+    for(let item of formEl){
+        const thisParent = item.closest('.form-item');
+        const FakeEl = thisParent.querySelector('.fake-placeholder');
+        //если инпут в фокусе
+        item.addEventListener('focus', function(){
+            FakeEl.classList.add('active');
+        });
+
+        //если инпут теряет фокус
+        item.addEventListener('blur', function(){
+
+            if(item.value.length > 0) {
+                FakeEl.classList.add('active');
+            }
+            else {
+                FakeEl.classList.remove('active');
+            }
+        });
+    }
     //изменение размера блока 
     // const BigElementBlock = document.querySelector('.portfolio-works__item--big');
     // $('.control-active').click(function(){

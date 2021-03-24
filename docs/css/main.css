@@ -1475,6 +1475,9 @@ input:hover {
   font-size: 20px;
   font-weight: 700;
   color: #bcbcbc;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 .fake-placeholder.active {
   top: -25px;
