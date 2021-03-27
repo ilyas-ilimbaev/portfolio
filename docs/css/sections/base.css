@@ -11,11 +11,26 @@
   --BtnContactsAct: #181818;
   --fontFam: 'mplus1p', sans-serif;
 }
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: #bfc6c993;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e1bb10;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e19f10;
+}
 * {
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 body {
   font-family: 'M PLUS 1P', sans-serif;

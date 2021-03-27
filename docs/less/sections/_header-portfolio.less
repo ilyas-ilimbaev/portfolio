@@ -14,12 +14,14 @@
         position: relative;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         margin-bottom: 50px;
     }
     @media only screen and (min-width: 1200px) { 
         position: relative;
         display: flex;
         flex-direction: row;
+        justify-content: unset;
         margin-bottom: 83px;
     }
 }
@@ -30,13 +32,13 @@
     border: 2px solid #8fa5ae;
     padding: 2px 6px;
     z-index: 1;
+    line-height: 1.7;
     position: relative;
     @media only screen and (min-width: 768px) {
-        margin-right: 50px;
         font-size: 24px;
     }
     @media only screen and (min-width: 1200px) { 
-        margin-right: 83px;
+        margin-right: 53px;
         font-size: 28px;
     }
 }
@@ -136,5 +138,42 @@
     @media only screen and (min-width: 1200px) { 
         max-width: 555px;
         margin-bottom: 56px;
+    }
+}
+.portfolio__works_button {
+    display: block;
+    width: 227px;
+    padding: 2px 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 3px dotted #8fa5ae;
+    @media only screen and (min-width: 768px) {
+        width: 278px;
+        float: right;
+        margin: 0;
+        transform: none;
+    } 
+    @media only screen and (min-width: 1200px) {
+        width: 302px;
+        float: right;
+        margin: 0;
+        transform: none;
+    }
+    &:hover {
+        border-color: #039be5;
+    }
+    & a {
+        color: #8fa5ae;
+        font-size: 18px;
+        font-weight: 700;
+        @media only screen and (min-width: 768px) {
+            font-size: 22px;
+        } 
+        @media only screen and (min-width: 1200px) {
+            font-size: 24px;
+        }
+    }
+    &:hover a {
+        color: #039be5;
     }
 }

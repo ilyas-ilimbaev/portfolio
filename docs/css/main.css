@@ -11,12 +11,27 @@
   --BtnContactsAct: #181818;
   --fontFam: 'mplus1p', sans-serif;
 }
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: #bfc6c993;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e1bb10;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e19f10;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 body {
   font-family: 'M PLUS 1P', sans-serif;
@@ -329,6 +344,36 @@ button {
   font-weight: 400;
   line-height: 1.2;
   color: var(--blueLineColor);
+}
+#page-nav {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  #page-nav {
+    display: block;
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 100;
+  }
+  #page-nav li {
+    width: 12px;
+    height: 12px;
+    background-color: #039be5;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  #page-nav li a {
+    display: block;
+    height: 100%;
+  }
+  #page-nav li.active {
+    background-color: #ed9626;
+  }
 }
 .header {
   overflow: hidden;
@@ -935,6 +980,9 @@ path:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 50px;
   }
 }
@@ -948,6 +996,9 @@ path:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
     margin-bottom: 83px;
   }
 }
@@ -958,17 +1009,17 @@ path:hover {
   border: 2px solid #8fa5ae;
   padding: 2px 6px;
   z-index: 1;
+  line-height: 1.7;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
   .portfolio-block-toggle__item {
-    margin-right: 50px;
     font-size: 24px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .portfolio-block-toggle__item {
-    margin-right: 83px;
+    margin-right: 53px;
     font-size: 28px;
   }
 }
@@ -1094,6 +1145,54 @@ path:hover {
     max-width: 555px;
     margin-bottom: 56px;
   }
+}
+.portfolio__works_button {
+  display: block;
+  width: 227px;
+  padding: 2px 0;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-bottom: 3px dotted #8fa5ae;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio__works_button {
+    width: 278px;
+    float: right;
+    margin: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .portfolio__works_button {
+    width: 302px;
+    float: right;
+    margin: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+.portfolio__works_button:hover {
+  border-color: #039be5;
+}
+.portfolio__works_button a {
+  color: #8fa5ae;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio__works_button a {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .portfolio__works_button a {
+    font-size: 24px;
+  }
+}
+.portfolio__works_button:hover a {
+  color: #039be5;
 }
 .timeline {
   padding-top: 60px;
@@ -1272,9 +1371,12 @@ path:hover {
   }
 }
 .contacts {
-  margin-bottom: 50px;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #96969d;
+  background-image: url(../img/contacts/contacts-bg-lines.jpg);
+  background-repeat: repeat-y;
+  background-position: center top;
 }
 @media only screen and (min-width: 768px) {
   .contacts {
@@ -1284,7 +1386,7 @@ path:hover {
 }
 @media only screen and (min-width: 1200px) {
   .contacts {
-    padding-top: 160px;
+    padding-top: 142px;
     padding-bottom: 140px;
   }
 }
@@ -1384,9 +1486,9 @@ path:hover {
   }
 }
 .contacts-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1499,6 +1601,13 @@ input:hover {
   border: none;
   padding: 15px 40px;
   cursor: pointer;
+}
+.error {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ff0000;
+  position: relative;
+  top: -10px;
 }
 .footer {
   background-color: #333333;

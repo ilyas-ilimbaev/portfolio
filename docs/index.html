@@ -9,6 +9,23 @@
     <title>Портфолио</title>
 </head>
 <body>
+    <ul id="page-nav">
+        <li class="active">
+            <a href="#header"></a>
+        </li>
+        <li>
+            <a href="#header-skills"></a>
+        </li>
+        <li>
+            <a href="#portfolio"></a>
+        </li>
+        <li>
+            <a href="#timeline"></a>
+        </li>
+        <li>
+            <a href="#contacts"></a>
+        </li>
+    </ul>
     <!---overlay-->
     <div id="overlay"></div>
     <!--mobile menu-->
@@ -30,7 +47,7 @@
         </div>
     </div>
     <!--// mobile menu-->
-    <header class="header">
+    <header class="header" id="header">
         <!--desktop menu-->
         <div class="header-nav__container">
             <div class="header-nav__wrapper">
@@ -77,7 +94,7 @@
         <div class="header-img">
             <img src="img/images/centerImg.png" alt="desktop">
         </div>
-        <div class="header-skills">
+        <div class="header-skills" id="header-skills">
             <div class="container">
                 <div class="header-skills__wrapper">
                     <div class="header-skills__content" id="skills">
@@ -171,12 +188,13 @@
                         </div>
                     </a>
                 </div>
+                <div class="portfolio__works_button"><a href="#">Просмотреть все работы</a></div>
             </div>
         </div>
     </section>
     <!--// portfolio-->
         <!--// desktop menu-->
-    <section class="timeline">
+    <section class="timeline" id="timeline">
         <div class="container">
             <div class="timeline__inner">
                 <h2 class="title-2 underline">Как я работаю</h2>
@@ -296,13 +314,13 @@
                     </div>
                 </div>
                 <div class="contacts-form">
-                    <form action="" class="contact-form">
+                    <form class="contact-form">
                         <div class="form-item">
-                            <input type="text" name="email" class="form-field">
+                            <input required type="email" name="email" class="form-field">
                             <label class="fake-placeholder">Ваш email</label>
                         </div>
                         <div class="form-item">
-                            <input type="text" name="subject" class="form-field">
+                            <input required type="text" name="subject" class="form-field">
                             <label class="fake-placeholder">Тема письма</label>
                         </div>
                         <div class="form-item">
@@ -313,6 +331,7 @@
                             <input type="submit" value="Отправить">
                         </div>
                     </form>
+                    <div class="answer"></div>
                 </div>
             </div>
         </div>
@@ -326,7 +345,9 @@
         </div>
     </footer>
     <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="libs/jquery.validate/jquery.validate.js"></script>
     <script src="libs/mixitup3/mixitup.min.js"></script>
+    <script src="libs/nav-btn/nav.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
