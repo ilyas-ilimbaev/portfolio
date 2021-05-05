@@ -1156,9 +1156,7 @@ path:hover {
   bottom: 0;
   color: #ed574f;
   background-color: #ffffff;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 24px;
   z-index: 2;
   padding: 10px;
   border-radius: 50px;
