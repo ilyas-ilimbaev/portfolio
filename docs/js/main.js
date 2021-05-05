@@ -105,19 +105,19 @@ $(document).ready(function() {
 		scrollChange: function ($currentListItem) {},
 	});
     //отправка данных
-	function ajaxFormSubmit() {
-		let string = $(".contact-form").serialize();
-		$.ajax({
-			type: "POST",
-			url: "libs/php/mail.php",
-			data: string,
-			success: function (html) {
-				$(".contact-form").slideUp(800);
-				$(".answer").html(html);
-			},
-		});
-		return false;
-	}
+	// function ajaxFormSubmit() {
+	// 	let string = $(".contact-form").serialize();
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "libs/php/mail.php",
+	// 		data: string,
+	// 		success: function (html) {
+	// 			$(".contact-form").slideUp(800);
+	// 			$(".answer").html(html);
+	// 		},
+	// 	});
+	// 	return false;
+	// }
 
     return false;
     //изменение размера блока 
