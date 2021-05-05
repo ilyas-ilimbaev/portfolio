@@ -137,6 +137,23 @@
     &:hover::after {
         width: 100%;
     }
+    &::before {
+        content: "Смотреть проект";
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        top: 50%;
+        bottom: 0;
+        color: #ed574f;
+        background-color: #ffffff;
+        height: max-content;
+        z-index: 2;
+        padding: 10px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        transform: translate(-50%, -50%);
+    }
 }
 .portfolio-works__item--big h4 {
     font-size: 22px;
