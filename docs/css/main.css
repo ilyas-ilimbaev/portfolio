@@ -26,6 +26,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #e19f10;
 }
+::-moz-selection {
+  background-color: #fbdc4d;
+}
+::selection {
+  background-color: #fbdc4d;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1023,6 +1029,9 @@ path:hover {
     font-size: 28px;
   }
 }
+.portfolio-block-toggle__item:hover {
+  color: #ed574f;
+}
 .portfolio-block-toggle__item:focus {
   color: #608482;
   border: 2px solid #608482;
@@ -1110,6 +1119,7 @@ path:hover {
   }
 }
 .portfolio-works__poster {
+  position: relative;
   margin-bottom: 26px;
 }
 @media only screen and (min-width: 768px) {
@@ -1121,6 +1131,21 @@ path:hover {
   .portfolio-works__poster {
     margin-bottom: 35px;
   }
+}
+.portfolio-works__poster::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background-color: rgba(251, 219, 77, 0.932);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.portfolio-works__poster:hover::after {
+  width: 100%;
 }
 .portfolio-works__item--big h4 {
   font-size: 22px;
@@ -1140,6 +1165,9 @@ path:hover {
     font-size: 22px;
   }
 }
+.portfolio-works__item--big {
+  position: relative;
+}
 @media only screen and (min-width: 1200px) {
   .portfolio-works__item--big {
     max-width: 555px;
@@ -1153,7 +1181,6 @@ path:hover {
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border-bottom: 3px dotted #8fa5ae;
 }
 @media only screen and (min-width: 768px) {
   .portfolio__works_button {
@@ -1173,13 +1200,11 @@ path:hover {
             transform: none;
   }
 }
-.portfolio__works_button:hover {
-  border-color: #039be5;
-}
 .portfolio__works_button a {
   color: #8fa5ae;
   font-size: 18px;
   font-weight: 700;
+  border-bottom: 3px dotted #8fa5ae;
 }
 @media only screen and (min-width: 768px) {
   .portfolio__works_button a {
@@ -1193,6 +1218,7 @@ path:hover {
 }
 .portfolio__works_button:hover a {
   color: #039be5;
+  border-color: #039be5;
 }
 .timeline {
   padding-top: 60px;

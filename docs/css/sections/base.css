@@ -26,6 +26,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #e19f10;
 }
+::selection {
+  background-color: #fbdc4d;
+}
 * {
   box-sizing: border-box;
 }
