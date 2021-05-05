@@ -165,18 +165,6 @@ button {
   .title-5 {
     font-size: 26px;
   }
-  .title-5::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    left: 0;
-    bottom: 10px;
-    z-index: -1;
-    background-color: var(--yellow);
-    left: 0.1px;
-    bottom: 1px;
-  }
 }
 .container {
   width: 100%;
@@ -442,6 +430,7 @@ button {
 .nav-link {
   position: relative;
   margin-bottom: 30px;
+  padding: 2px;
   font-size: 20px;
   font-weight: 700;
   color: #000;
@@ -455,6 +444,13 @@ button {
   .nav-link:last-child {
     margin-right: 0;
   }
+}
+.nav-link:focus {
+  outline: 2px dashed #ed574f;
+}
+.nav-link:focus::before,
+.nav-link:focus::after {
+  display: none;
 }
 .nav-link-messangers {
   display: none;
@@ -1088,18 +1084,50 @@ path:hover {
   display: block;
   padding: 0 10px;
 }
-.portfolio-works__item h4 {
+.portfolio-works-descpip-title {
+  position: relative;
+  margin-bottom: 4px;
+  display: inline;
   font-size: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 @media only screen and (min-width: 768px) {
-  .portfolio-works__item h4 {
+  .portfolio-works-descpip-title {
     font-size: 22px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .portfolio-works__item h4 {
+  .portfolio-works-descpip-title {
     font-size: 24px;
   }
+}
+.portfolio-works-descpip-title:hover {
+  color: #ed574f;
+}
+.portfolio-works-descpip-title::before,
+.portfolio-works-descpip-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  background-color: #ed574f;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.portfolio-works-descpip-title::after {
+  left: 50%;
+}
+.portfolio-works-descpip-title::before {
+  right: 50%;
+}
+.portfolio-works-descpip-title:hover::after {
+  width: 50%;
+}
+.portfolio-works-descpip-title:hover::before {
+  width: 50%;
 }
 .portfolio-works__item p {
   font-size: 16px;
@@ -1132,7 +1160,7 @@ path:hover {
     margin-bottom: 35px;
   }
 }
-.portfolio-works__poster::after {
+.portfolio-works__poster::before {
   content: "";
   position: absolute;
   display: block;
@@ -1144,10 +1172,10 @@ path:hover {
   -webkit-transition: .5s;
   transition: .5s;
 }
-.portfolio-works__poster:hover::after {
+.portfolio-works__poster:hover::before {
   width: 100%;
 }
-.portfolio-works__poster::before {
+.portfolio-works__poster::after {
   content: "Смотреть проект";
   position: absolute;
   display: inline-block;
@@ -1156,14 +1184,19 @@ path:hover {
   bottom: 0;
   color: #ed574f;
   background-color: #ffffff;
-  height: 24px;
+  height: 16px;
   z-index: 2;
-  padding: 10px;
+  padding: 15px;
   border-radius: 50px;
+  font-family: sans-serif;
   font-size: 16px;
   font-weight: 600;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+.portfolio-works__poster::after:hover {
+  color: #ffffff;
+  background-color: #ea736d;
 }
 .portfolio-works__item--big h4 {
   font-size: 22px;
@@ -1291,6 +1324,7 @@ path:hover {
   width: 100%;
   padding-left: 98px;
   min-height: 175px;
+  cursor: pointer;
 }
 .timeline-block__item::after {
   content: '';
@@ -1307,6 +1341,23 @@ path:hover {
   .timeline-block__item {
     width: 50%;
   }
+}
+.timeline-block__item:hover h4::after {
+  background-color: #ed574f;
+}
+.timeline-block__item h4::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  left: 0;
+  bottom: 10px;
+  z-index: -1;
+  background-color: var(--yellow);
+  left: 0.1px;
+  bottom: 1px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 @media only screen and (min-width: 768px) {
   .timeline-block__item:nth-child(2n) {

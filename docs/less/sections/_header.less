@@ -41,7 +41,6 @@
 }
 .header-nav {
     display: none;
-
     @media only screen and (min-width: 780px) {
 
     }
@@ -52,13 +51,12 @@
 .nav-link {
     position: relative;
     margin-bottom: 30px;
+    padding: 2px;
     font-size: 20px;
     font-weight: 700;
     color: #000;
     z-index: 1;
-
     @media only screen and (min-width: 780px) {
-
     }
     @media only screen and (min-width: 1200px) {
         margin-bottom: 0;
@@ -68,6 +66,12 @@
             margin-right: 0;
         }
 
+    }
+    &:focus {
+        outline: 2px dashed #ed574f;
+    }
+    &:focus::before, &:focus::after {
+        display: none;
     }
 }
 .nav-link-messangers {

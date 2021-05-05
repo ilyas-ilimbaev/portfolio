@@ -92,13 +92,43 @@
     display: block;
     padding: 0 10px;
 }
-.portfolio-works__item h4{
+.portfolio-works-descpip-title {
+    position: relative;
+    margin-bottom: 4px;
+    display: inline;
     font-size: 20px;
+    transition: .5s;
     @media only screen and (min-width: 768px) { 
         font-size: 22px;
     }
     @media only screen and (min-width: 1200px) { 
         font-size: 24px;
+    }
+    &:hover {
+        color: #ed574f;
+        // border-bottom: 2px solid #ed574f;
+    }
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        background-color: #ed574f;
+        transition: .5s;
+    }
+    &::after {
+        left: 50%;
+    }
+    &::before {
+        right: 50%;
+    }
+    &:hover::after {
+        width: 50%;
+    }
+    &:hover::before {
+        width: 50%;
     }
 }
 .portfolio-works__item p {
@@ -123,7 +153,7 @@
     @media only screen and (min-width: 1200px) {
         margin-bottom: 35px;
     }
-    &::after {
+    &::before {
         content: "";
         position: absolute;
         display: block;
@@ -134,10 +164,10 @@
         background-color: rgba(251, 219, 77, 0.932);
         transition: .5s;
     }
-    &:hover::after {
+    &:hover::before {
         width: 100%;
     }
-    &::before {
+    &::after {
         content: "Смотреть проект";
         position: absolute;
         display: inline-block;
@@ -146,13 +176,18 @@
         bottom: 0;
         color: #ed574f;
         background-color: #ffffff;
-        height: 24px;
+        height: 16px;
         z-index: 2;
-        padding: 10px;
+        padding: 15px;
         border-radius: 50px;
+        font-family: sans-serif;
         font-size: 16px;
         font-weight: 600;
         transform: translate(-50%, -50%);
+    }
+    &::after:hover {
+        color: #ffffff;
+        background-color: #ea736d;
     }
 }
 .portfolio-works__item--big h4 {
