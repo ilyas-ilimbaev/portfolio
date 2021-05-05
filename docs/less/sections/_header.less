@@ -76,7 +76,6 @@
 }
 .nav-link-messangers {
     display: none;
-
     @media only screen and (min-width: 780px) {}
 
     @media only screen and (min-width: 1200px) {
@@ -94,7 +93,13 @@
             }
         }
     }
-}
-path:hover {
-    fill: #778899;
+    & a:hover:nth-child(1) path {
+        fill: #0077b5;
+    }
+    & a:hover:nth-child(2):hover path {
+        fill: #6cc644;
+    }
+    & a:hover:nth-child(3):hover path {
+        fill: #45668egit;
+    }
 }
