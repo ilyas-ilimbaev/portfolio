@@ -109,11 +109,11 @@ $(document).ready(function() {
 		let string = $(".contact-form").serialize();
 		$.ajax({
 			type: "POST",
-			url: "php/mail.php",
+			url: "libs/php/mail.php",
 			data: string,
 			success: function (html) {
 				$(".contact-form").slideUp(800);
-				$("#answer").html(html);
+				$(".answer").html(html);
 			},
 		});
 		return false;
