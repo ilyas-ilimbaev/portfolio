@@ -1030,6 +1030,8 @@ button {
   z-index: 1;
   line-height: 1.7;
   position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 @media only screen and (min-width: 768px) {
   .portfolio-block-toggle__item {
@@ -1043,35 +1045,11 @@ button {
   }
 }
 .portfolio-block-toggle__item:hover {
-  color: #ed574f;
+  color: #608482;
 }
-.portfolio-block-toggle__item:focus {
+.control-active {
   color: #608482;
   border: 2px solid #608482;
-}
-.portfolio-block-toggle__item::before,
-.portfolio-block-toggle__item::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 18px;
-  bottom: -1px;
-  z-index: -1;
-  background-color: #91b0b5;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-.portfolio-block-toggle__item::before {
-  left: 50%;
-}
-.portfolio-block-toggle__item::after {
-  right: 50%;
-}
-.portfolio-block-toggle__item:focus::before {
-  width: 50%;
-}
-.portfolio-block-toggle__item:focus::after {
-  width: 50%;
 }
 .works-cards__wrapper {
   display: -webkit-box;
@@ -1781,5 +1759,15 @@ form.contact-form {
   color: #b0b0b0;
   display: inline-block;
   border-bottom: 2px solid #b0b0b0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.footer-text__bottom-line:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.footer-text__bottom-line:visited {
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
 /*# sourceMappingURL=main.css.map */

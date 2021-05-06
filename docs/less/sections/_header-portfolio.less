@@ -34,6 +34,7 @@
     z-index: 1;
     line-height: 1.7;
     position: relative;
+    transition: .5s;
     @media only screen and (min-width: 768px) {
         font-size: 24px;
     }
@@ -42,36 +43,12 @@
         font-size: 28px;
     }
     &:hover {
-        color: #ed574f;
-    }
-    &:focus {
         color: #608482;
-        border: 2px solid #608482;
     }
 }
-.portfolio-block-toggle__item {
-    &::before, &::after {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: 18px;
-        bottom: -1px;
-        z-index: -1;
-        background-color: #91b0b5;
-        transition: .5s;
-    }
-    &::before {
-        left: 50%;
-    }
-    &::after {
-        right: 50%;
-    }
-    &:focus::before {
-        width: 50%;
-    }
-    &:focus::after {
-        width: 50%;
-    }
+.control-active {
+    color: #608482;
+    border: 2px solid #608482;
 }
 .works-cards__wrapper {
     display: flex;
