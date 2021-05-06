@@ -1155,6 +1155,7 @@ button {
 .portfolio-works__poster {
   position: relative;
   margin-bottom: 26px;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .portfolio-works__poster {
@@ -1181,28 +1182,39 @@ button {
 .portfolio-works__poster:hover::before {
   width: 100%;
 }
-.portfolio-works__poster::after {
-  content: "Смотреть проект";
+.portfolio-works__poster:hover .hidden__portfolio-block {
+  right: 50%;
+}
+.portfolio-works__item--big .hidden__portfolio-block {
+  font-size: 20px;
+}
+.hidden__portfolio-block {
   position: absolute;
   display: inline-block;
-  left: 50%;
+  right: -50%;
   top: 50%;
   bottom: 0;
   color: #ed574f;
   background-color: #ffffff;
   height: 16px;
   z-index: 2;
-  padding: 15px;
+  padding: 24px;
   border-radius: 50px;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  line-height: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
-.portfolio-works__poster::after:hover {
+.hidden__portfolio-block:hover {
   color: #ffffff;
   background-color: #ea736d;
+}
+.hidden__portfolio-block:active {
+  background-color: #d4423b;
 }
 .portfolio-works__item--big h4 {
   font-size: 22px;

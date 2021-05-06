@@ -144,6 +144,7 @@
                 <div id="works-block" class="works-cards__wrapper">
                     <a class="portfolio-works__item portfolio-works__item--big mix boots" href="http://m92263y7.beget.tech/unit-html-project/index.html">
                         <div class="portfolio-works__poster works-card--big">
+                            <span class="hidden__portfolio-block">Смотреть проект</span>
                             <img src="img/portfolio/project-unit.jpg" alt="Проект Юнит">
                         </div>
                         <div class="portfolio-works-descpip">
@@ -153,6 +154,7 @@
                     </a>
                     <a class="portfolio-works__item portfolio-works__item--big mix wp" href="http://m92263y7.beget.tech/forest-travel-project/index.html">
                         <div class="portfolio-works__poster works-card--big">
+                            <span class="hidden__portfolio-block">Смотреть проект</span>
                             <img src="img/portfolio/project-ForestTravel.jpg" alt="Проект Форест Трэвел">
                         </div>
                         <div class="portfolio-works-descpip">
@@ -160,8 +162,9 @@
                             <p class="portfolio-works-descpip-details">Верстка многостраничного сайта.</p>
                         </div>
                     </a>
-                    <a class="portfolio-works__item mix frontend" href="http://m92263y7.beget.tech/projects-portfolio/index.html">
+                    <a class="portfolio-works__item mix frontend small--card" href="http://m92263y7.beget.tech/projects-portfolio/index.html">
                         <div class="portfolio-works__poster works-card--big">
+                            <span class="hidden__portfolio-block">Смотреть проект</span>
                             <img src="img/portfolio/project-portfolio.jpg" alt="Проект Портфолио">
                         </div>
                         <div class="portfolio-works-descpip">
@@ -169,8 +172,9 @@
                             <p class="portfolio-works-descpip-details">Верстка личного сайта-портфолио.</p>
                         </div>
                     </a>
-                    <a class="portfolio-works__item mix boots" href="http://m92263y7.beget.tech/book-card/index.html">
+                    <a class="portfolio-works__item mix boots small--card" href="http://m92263y7.beget.tech/book-card/index.html">
                         <div class="portfolio-works__poster works-card--big">
+                            <span class="hidden__portfolio-block">Смотреть проект</span>
                             <img src="img/portfolio/Books-card.png" alt="Карточка товара Book">
                         </div>
                         <div class="portfolio-works-descpip">
@@ -178,8 +182,9 @@
                             <p class="portfolio-works-descpip-details">Верстка карточки товара под pixel perfect.</p>
                         </div>
                     </a>
-                    <a class="portfolio-works__item mix frontend" href="http://m92263y7.beget.tech/motocycle-card/index.html">
+                    <a class="portfolio-works__item mix frontend small--card" href="http://m92263y7.beget.tech/motocycle-card/index.html">
                         <div class="portfolio-works__poster works-card--big">
+                            <span class="hidden__portfolio-block">Смотреть проект</span>
                             <img src="img/portfolio/Motorbike-card.png" alt="Карточка товара Moto">
                         </div>
                         <div class="portfolio-works-descpip">
@@ -314,7 +319,7 @@
                     </div>
                 </div>
                 <div class="contacts-form">
-                    <form class="contact-form" method="POST" action="libs/php/main.php">
+                    <form id="contact_form" class="contact-form">
                         <div class="form-item">
                             <input required type="email" name="email" class="form-field">
                             <label class="fake-placeholder">Ваш email</label>
@@ -328,7 +333,7 @@
                             <label class="fake-placeholder">Текст сообщения</label>
                         </div>
                         <div class="form-item form-btn">
-                            <input type="submit" value="Отправить">
+                            <input class="form-btn-submit" type="button" value="Отправить">
                         </div>
                     </form>
                     <div class="answer"></div>

@@ -147,6 +147,7 @@
 .portfolio-works__poster {
     position: relative;
     margin-bottom: 26px;
+    overflow: hidden;
     @media only screen and (min-width: 768px) {
         margin-bottom: 26px;
     }
@@ -167,27 +168,39 @@
     &:hover::before {
         width: 100%;
     }
-    &::after {
-        content: "Смотреть проект";
-        position: absolute;
-        display: inline-block;
-        left: 50%;
-        top: 50%;
-        bottom: 0;
-        color: #ed574f;
-        background-color: #ffffff;
-        height: 16px;
-        z-index: 2;
-        padding: 15px;
-        border-radius: 50px;
-        font-family: sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        transform: translate(-50%, -50%);
+    &:hover .hidden__portfolio-block {
+        right: 50%;
     }
-    &::after:hover {
+}
+.portfolio-works__item--big {
+    & .hidden__portfolio-block {
+        font-size: 20px;
+    }
+}
+.hidden__portfolio-block {
+    position: absolute;
+    display: inline-block;
+    right: -50%;
+    top: 50%;
+    bottom: 0;
+    color: #ed574f;
+    background-color: #ffffff;
+    height: 16px;
+    z-index: 2;
+    padding: 24px;
+    border-radius: 50px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transform: translate(50%, -50%);
+    line-height: 0;
+    transition: .5s;
+    &:hover {
         color: #ffffff;
         background-color: #ea736d;
+    }
+    &:active {
+        background-color: #d4423b;
     }
 }
 .portfolio-works__item--big h4 {

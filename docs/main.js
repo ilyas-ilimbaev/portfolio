@@ -105,39 +105,24 @@ $(document).ready(function() {
 		scrollChange: function ($currentListItem) {},
 	});
     //отправка данных
-    // $('.contact-form').submit(function(){
-    //     let string = $(".contact-form").serialize();
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "libs/php/mail.php",
-    //         data: string,
-    //         success: function (html) {
-    //             $(".contact-form").slideUp(800);
-    //             $(".answer").html(html);
-    //         },
-    //     });
-    //     return false;
-    // });
-    //send mail
-    $(".form-btn-submit").click(function(){
-        sendAjaxForm('answer', '#contact_form', '../libs/php/mail.php');
-        return false; 
-        });
+	function ajaxFormSubmit() {
+		let string = $(".contact-form").serialize();
+		$.ajax({
+			type: "POST",
+			url: "libs/php/mail.php",
+			data: string,
+			success: function (html) {
+				$(".contact-form").slideUp(800);
+				$(".answer").html(html);
+			},
+		});
+		return false;
+	}
 
-    function sendAjaxForm(answer, contact_form, url) {
-    $.ajax({
-        url:     url, //url страницы (action_ajax_form.php)
-        type:     "POST", //метод отправки
-        dataType: "html", //формат данных
-        data: contact_form.serialize(),  // Сеарилизуем объект
-        success: function(response) {
-            result = jQuery.parseJSON(response);
-            document.getElementById(answer).innerHTML = "Данные отправленны.";
-        },
-        error: function(html) { // Данные не отправлены
-            document.getElementById(answer).innerHTML = "Ошибка. Данные не отправленны.";
-        }
-    });
-    }
     return false;
+    //изменение размера блока 
+    // const BigElementBlock = document.querySelector('.portfolio-works__item--big');
+    // $('.control-active').click(function(){
+    //     BigElementBlock.classList.remove("portfolio-works__item--big");
+    // });
 });
