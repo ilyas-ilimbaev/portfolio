@@ -11,6 +11,7 @@ form.contact-form {
 }
 .form-item {
     position: relative;
+    transition: .5s;
     .form-field {
         width: 100%;
         border: 0;
@@ -24,12 +25,18 @@ form.contact-form {
     input[type="submit"] {
         appearance: none;
     }
+    & input, & textarea {
+        transition: .5s;
+    }
+    & .form-field:hover, & textarea:hover {
+        border-bottom: 2px solid #ed9626;
+    }
+    & label:hover {
+        color: #e9962a;
+    }
 }
 .form-item + .form-item {
     margin-top: 40px;
-}
-input:hover {
-    border-bottom: 2px solid #ed9626;
 }
 .fake-placeholder {
     position: absolute;
@@ -37,7 +44,7 @@ input:hover {
     top: 7px;
     font-size: 20px;
     font-weight: 700;
-    color: #bcbcbc;
+    color: #ed9626cc;
     pointer-events: none;
     transition: .5s;
 }
@@ -59,6 +66,9 @@ input:hover {
     border: none;
     padding: 15px 40px;
     cursor: pointer;
+    &:hover {
+        background-color: #ffd105;
+    }
 }
 .error {
     font-size: 15px;

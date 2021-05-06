@@ -26,10 +26,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #e19f10;
 }
-::-moz-selection {
+p::-moz-selection {
   background-color: #fbdc4d;
 }
-::selection {
+p::selection {
   background-color: #fbdc4d;
 }
 * {
@@ -607,9 +607,14 @@ button {
           align-items: center;
   margin-right: 20px;
   margin-left: -0.36em;
-  border-top: 2px solid #ed9626;
-  border-bottom: 2px solid #039be5;
+  border-top: 3px solid #ed9626;
+  border-bottom: 3px solid #039be5;
   border-radius: 7px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: 1px 2px 9px -2px #6798c2;
+          box-shadow: 1px 2px 9px -2px #6798c2;
+  opacity: .8;
 }
 @media only screen and (min-width: 768px) {
   .nav-link-messangers__mobile a {
@@ -626,6 +631,12 @@ button {
 }
 .nav-link-messangers__mobile a:first-child {
   margin-left: 0;
+}
+.nav-link-messangers__mobile a:hover {
+  -webkit-box-shadow: 0px 2px 6px -5px #000000;
+          box-shadow: 0px 2px 6px -5px #000000;
+  border-top: 3px solid #039be5;
+  border-bottom: 3px solid #ed9626;
 }
 .header-center__information {
   margin-top: 40px;
@@ -1661,6 +1672,8 @@ form.contact-form {
 }
 .form-item {
   position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 .form-item .form-field {
   width: 100%;
@@ -1677,11 +1690,20 @@ form.contact-form {
      -moz-appearance: none;
           appearance: none;
 }
+.form-item input,
+.form-item textarea {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.form-item .form-field:hover,
+.form-item textarea:hover {
+  border-bottom: 2px solid #ed9626;
+}
+.form-item label:hover {
+  color: #e9962a;
+}
 .form-item + .form-item {
   margin-top: 40px;
-}
-input:hover {
-  border-bottom: 2px solid #ed9626;
 }
 .fake-placeholder {
   position: absolute;
@@ -1689,7 +1711,7 @@ input:hover {
   top: 7px;
   font-size: 20px;
   font-weight: 700;
-  color: #bcbcbc;
+  color: #ed9626cc;
   pointer-events: none;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1714,6 +1736,9 @@ input:hover {
   border: none;
   padding: 15px 40px;
   cursor: pointer;
+}
+.form-btn input:hover {
+  background-color: #ffd105;
 }
 .error {
   font-size: 15px;
