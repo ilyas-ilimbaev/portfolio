@@ -1556,6 +1556,10 @@ button {
     margin-right: 32px;
   }
 }
+.contacts-info,
+.contacts-form {
+  position: relative;
+}
 @media only screen and (min-width: 768px) {
   .contacts-info,
   .contacts-form {
@@ -1637,6 +1641,16 @@ button {
   .nav-link-messangers a:last-child {
     margin-right: 0;
   }
+}
+.answer {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 30px -2px #c2dbeb;
+  padding: 25px;
+  border-radius: 6px;
+  z-index: 2;
 }
 form.contact-form {
   max-width: 500px;

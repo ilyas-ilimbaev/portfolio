@@ -89,9 +89,26 @@ $(document).ready(function() {
             message: {
                 required: 'Введите сообщение'
             }
-        }
+        },
+        submitHandler: function (from) {
+			ajaxFormSubmit();
+		},
     })
-    //dots
+    //sending form
+    function ajaxFormSubmit() {
+        let string = $(".contact-form").serialize();
+        $.ajax({
+            type: "POST",
+            url: "libs/php/mail.php",
+            data: string,
+            success: function (html) {
+                $(".contact-form").slideUp(800);
+                $(".result").html(html);
+            },
+        });
+        return false;
+    }
+
     // Create page-nav dots
 	$("#page-nav").onePageNav({
 		currentClass: "active",
@@ -104,40 +121,5 @@ $(document).ready(function() {
 		end: function () {},
 		scrollChange: function ($currentListItem) {},
 	});
-    //отправка данных
-    // $('.contact-form').submit(function(){
-    //     let string = $(".contact-form").serialize();
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "libs/php/mail.php",
-    //         data: string,
-    //         success: function (html) {
-    //             $(".contact-form").slideUp(800);
-    //             $(".answer").html(html);
-    //         },
-    //     });
-    //     return false;
-    // });
-    //send mail
-    $(".form-btn-submit").click(function(){
-        sendAjaxForm('answer', '#contact_form', '../libs/php/mail.php');
-        return false; 
-        });
-
-    function sendAjaxForm(answer, contact_form, url) {
-    $.ajax({
-        url:     url, //url страницы (action_ajax_form.php)
-        type:     "POST", //метод отправки
-        dataType: "html", //формат данных
-        data: contact_form.serialize(),  // Сеарилизуем объект
-        success: function(response) {
-            result = jQuery.parseJSON(response);
-            document.getElementById(answer).innerHTML = "Данные отправленны.";
-        },
-        error: function(html) { // Данные не отправлены
-            document.getElementById(answer).innerHTML = "Ошибка. Данные не отправленны.";
-        }
-    });
-    }
     return false;
 });

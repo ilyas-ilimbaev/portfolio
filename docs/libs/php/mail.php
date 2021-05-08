@@ -58,11 +58,13 @@ send_user_data_in_txt_file ($message);
 
 // header('location: ../thankyou.php');
 
-echo "<div class='contact-form__success'>
-		<h2>Заявка принята!<br>
-		Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время!
-		</h2>
-	  </div> ";
+echo "<div class='answer'>
+		<div class='contact-form__success'>
+			<h2>Заявка принята!<br>
+				Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время!
+			</h2>
+	  	</div>
+	</div>";
 
 ?>
 
