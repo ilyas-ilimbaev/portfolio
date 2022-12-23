@@ -14,7 +14,7 @@
 
 Если вы ищите специалиста по вёрстке сайтов, front-end разработчика в команду или для работы над проектом — напишите мне.
 
-- демо: https://ilyas-ilimbaev.github.io/portfolio/
+- сайт: https://ilimbaev.ru/
 
 - email: ilyas.ilimbaev@yandex.ru
 
