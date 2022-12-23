@@ -1,0 +1,80 @@
+form.contact-form {
+    max-width: 500px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 26px 41px 7px rgb(194, 219, 235, 0.5);
+    padding: 40px 15px;
+    @media only screen and (min-width: 768px) {
+    }
+    @media only screen and (min-width: 1200px) {
+        padding: 40px;
+    }
+}
+.form-item {
+    position: relative;
+    transition: .5s;
+    .form-field {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid #eaeaea;
+        height: 50px;
+        font-size: 30px;
+    }
+    textarea.form-field {
+        height: 130px;
+    }
+    input[type="submit"] {
+        appearance: none;
+    }
+    & input, & textarea {
+        transition: .5s;
+    }
+    & .form-field:hover, & textarea:hover {
+        border-bottom: 2px solid #ed9626;
+    }
+    & label:hover {
+        color: #e9962a;
+    }
+}
+.form-item + .form-item {
+    margin-top: 40px;
+}
+.fake-placeholder {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ed9626cc;
+    pointer-events: none;
+    transition: .5s;
+}
+.fake-placeholder.active {
+    top: -25px;
+    font-size: 16px;
+    color: #ed9626;
+    @media only screen and (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+.form-btn input {
+    font-size: 22px;
+    color: #000000;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 30px;
+    background-color: #fbdc4d;
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+    &:hover {
+        background-color: #ffd105;
+    }
+}
+.error {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff0000;
+    position: relative;
+    top: -10px;
+}
+  

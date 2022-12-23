@@ -1,0 +1,105 @@
+.header {
+    overflow: hidden;
+    padding-top: 36px;
+    background-image: url(../img/images/headerBg.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+
+    @media only screen and (min-width: 780px) {
+        padding-top: 36px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-top: 62px;
+    }
+}
+.header-nav__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1400px;
+    padding: 0 15px;
+}
+.header-nav__logo {
+    position: relative;
+    font-size: 42px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        left: 0;
+        bottom: 10px;
+        z-index: -1;
+        background-color: var(--yellow);
+        transition: .5s;
+    }
+}
+.header-nav {
+    display: none;
+    @media only screen and (min-width: 780px) {
+
+    }
+    @media only screen and (min-width: 1200px) { 
+        display: block;
+    }
+}
+.nav-link {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    z-index: 1;
+    @media only screen and (min-width: 780px) {
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        margin-right: 80px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+    &:focus {
+        outline: 2px dashed #ed574f;
+    }
+    &:focus::before, &:focus::after {
+        display: none;
+    }
+}
+.nav-link-messangers {
+    display: none;
+    @media only screen and (min-width: 780px) {}
+
+    @media only screen and (min-width: 1200px) {
+        display: block;
+        a { 
+            display: inline-flex;
+            width: 32px;
+            height: 32px;
+            margin-right: 20px;
+            align-items: center;
+            justify-content: center;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    & a:hover:nth-child(1) path {
+        fill: #0077b5;
+    }
+    & a:hover:nth-child(2):hover path {
+        fill: #6cc644;
+    }
+    & a:hover:nth-child(3):hover path {
+        fill: #45668e;
+    }
+}

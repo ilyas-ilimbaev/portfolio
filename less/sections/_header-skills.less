@@ -1,0 +1,92 @@
+.header-skills {
+    margin-bottom: 60px;
+}
+.header-skills__wrapper {
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: 780px) {
+        flex-direction: row;
+    }
+    @media only screen and (min-width: 1200px) {
+        flex-direction: row;
+    }
+}
+.header-skills__content {
+    margin-right: 0;
+    @media only screen and (min-width: 780px) {
+        margin-right: 32px;
+        width: 338px;
+    }
+    @media only screen and (min-width: 1200px) {
+        width: 653px;
+        margin-right: 127px;
+    }
+}
+.header-skills-contacts {
+    @media only screen and (min-width: 780px) {
+        width: 338px;
+    }
+    @media only screen and (min-width: 1200px) {
+        width: 360px;
+    }
+}
+.skills-title-container {
+    margin-bottom: 40px;
+}
+.skills-list-item {
+    margin-bottom: 10px;
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--text);
+
+        @media only screen and (min-width: 780px) {
+            font-size: 18px;
+        }
+        @media only screen and (min-width: 1200px) {
+            font-size: 24px;
+            position: relative;
+            &::before {
+                content: '';
+                position: relative;
+                display: inline-block;
+                width: 23px;
+                height: 2px;
+                background-color: black;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+    }
+    &:last-child {
+        margin-bottom: 38px;
+    }
+}
+.header-skills-contacts .nav-link-messangers__mobile {
+    margin-bottom: 20px;
+    @media only screen and (min-width: 780px) {
+        font-size: 30px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: 34px;
+    }
+}
+.header-skills-contacts>.nav-link-messangers__mobile {
+    display: block;
+    @media only screen and (min-width: 780px) {
+        display: flex;
+    }
+    @media only screen and (min-width: 1200px) {
+        display: flex;
+    }
+}
+.black {
+    font-size: 18px;
+    color: var(--text);
+    @media only screen and (min-width: 780px) {
+        font-size: 20px;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: 24px;
+    }
+}

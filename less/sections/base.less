@@ -1,0 +1,301 @@
+:root {
+    --text: #000;
+    --red: #ea736d;
+    --yellow: #fbdc4d;
+    --blueLineColor: #039be5;
+    --btnBg: #fbdc4d;
+    --btnBgHov: #ffd200;
+    --btnBgAct: #e1bc10;
+    --BtnContacts: #464646;
+    --BtnContactsHov: #797979;
+    --BtnContactsAct: #181818;
+    --fontFam: 'mplus1p', sans-serif;
+}
+::-webkit-scrollbar-track {
+    background-color:#fff;
+}
+::-webkit-scrollbar-track:hover {   
+    background-color:#bfc6c993;
+}
+::-webkit-scrollbar-thumb {
+    background-color:#e1bb10;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color:#e19f10;
+}
+p::selection {
+    background-color: #fbdc4d;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: auto;
+}
+body {
+    font-family: 'M PLUS 1P', sans-serif;
+    font-weight: 400;
+    // color: rgb(205, 127, 30);
+    color: #000;
+    min-width: 320px;
+}
+body.noscroll {
+    overflow: hidden;
+    @media only screen and (min-width: 1200px) {
+        overflow: scroll;
+    }
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+a, a:hover {
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+svg {
+    max-width: 100%;
+}
+button, textarea, input {
+    outline: none;
+}
+input[type="radio"], 
+input[type="checkbox"], 
+input[type="submit"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+textarea {
+    resize: none;
+}
+button {
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.title-2, .title-3, .title-5 {
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    line-height: 1.2;
+    z-index: 1;
+    color: var(--text);
+}
+.title-2 {
+    margin-bottom: 46px;
+    font-size: 42px;
+
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 55px;
+        font-size: 52px;
+    }
+    @media only screen and (min-width: 1200px) { 
+        margin-bottom: 66px;
+        font-size: 64px;
+    }
+}
+.title-3 {
+    font-size: 30px;
+    @media only screen and (min-width: 780px) {
+        font-size: 32px;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: 40px;
+    }
+}
+.title-4 {
+    display: inline-block;
+    font-family: var(--fontFam);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text);
+}
+.title-5 {
+    font-size: 20px;
+    @media only screen and (min-width: 780px) {
+        font-size: 24px;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: 26px;
+    }
+}
+.container {
+    width: 100%;
+    max-width: 320px;
+    padding: 0 15px;
+    margin: 0 auto;
+    @media only screen and (min-width: 760px) {
+        & {
+          max-width: 700px;
+        }
+      }
+    @media only screen and (min-width: 768px) {
+        & {
+          max-width: 738px;
+        }
+      }
+    @media only screen and (min-width: 1200px) {
+        & {
+          padding: 0;
+          max-width: 1140px;
+        }
+    }
+}
+.header-nav__container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-bottom: 34px;
+}
+@media only screen and (min-width: 760px) {
+    .header-nav__container {
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+  }
+@media only screen and (min-width: 768px) {
+    .header-nav__container {
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+  }
+@media only screen and (min-width: 1200px) {
+    .header-nav__container {
+        margin-bottom: 147px;
+        max-width: 1430px;
+    }
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    left: 0;
+    bottom: 4px;
+    z-index: -1;
+    background-color: var(--yellow);
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.nav-link-messangers__mobile {
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (min-width: 768px) {
+        justify-content: flex-start;
+    }
+    @media only screen and (min-width: 1200px) {
+    }
+}
+.portfolio .underline::after, .timeline .underline::after {
+    bottom: 2px;
+    @media only screen and (min-width: 768px) {
+        bottom: 8px;
+    }
+    @media only screen and (min-width: 1200px) {
+        bottom: 9px;
+    }
+}
+.bottom-line{
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background-color: #000;
+    }
+    @media only screen and (min-width: 780px) {
+
+    }
+    @media only screen and (min-width: 1200px) { 
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 10px;
+            bottom: 2px;
+            z-index: -1;
+            background-color: var(--yellow);
+            transition: .5s;
+        }
+        &::after {
+            left: 50%;
+        }
+        &::before {
+            right: 50%;
+        }
+        &:hover::after {
+            width: 50%;
+        }
+        &:hover::before {
+            width: 50%;
+        }
+    }
+}
+#overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+#overlay.active {
+    display: block;
+    @media only screen and (min-width: 1200px) {
+        display: none;
+    }
+}
+.link-line::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+}
+.link-line.blue::after {
+    background-color: var(--blueLineColor);
+}
+.link-line.black::after{
+    background-color: var(--text);
+}
+.link-mail {
+    position: relative;
+    margin-top: 42px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--blueLineColor);
+}
