@@ -18,4 +18,4 @@
 
 - email: ilyas.ilimbaev@yandex.ru
 
-![Портфолио](https://raw.githubusercontent.com/kubris/portfolio/main/docs/img/header/header-bg.png)
+![Портфолио](https://ilimbaev.ru/img/images/centerImg.png)
